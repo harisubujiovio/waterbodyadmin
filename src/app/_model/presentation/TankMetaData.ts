@@ -1,0 +1,35 @@
+export interface TankMetaData {
+    Unique_id: string;
+    FID: string;
+    CLUSTER: string;
+    TANK_NUM: string;
+    Tank_Name: string;
+    Latitude: string;
+    Longitude: string;
+    Village: string;
+    Block: string;
+    Taluk: string;
+    District: string;
+    Subbasin: string;
+    Basin: string;
+    Section: string;
+    Sub_Dn: string;
+    Division: string;
+    Circle: string;
+    Region: string;
+    Tank_Type: string;
+    Cap_MCM: string;
+    FTL_m: string;
+    MWL_m: string;
+    TBL_m: string;
+    Sto_Dep_m: string;
+    Ayacut_ha: string;
+    Catch_sqkm: string;
+    Wat_Spr_ha: string;
+    No_of_Weir: string;
+    Weir_Len_m: string;
+    No_Sluice: string;
+    Low_Sil_m: string;
+    Bund_Len_m: string;
+    Dis_cusec: string;
+  }

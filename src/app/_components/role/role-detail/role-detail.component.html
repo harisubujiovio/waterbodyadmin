@@ -1,0 +1,43 @@
+<div class="container" *ngIf="(role$ | async) as role">
+    <div fxLayout="row" fxLayoutAlign="space-between none">
+        <mat-label>Role Detail</mat-label>
+      
+       <a [routerLink]="['/role/edit/{{roleId}}']" mat-fab color="primary">
+         <mat-icon>edit</mat-icon>
+       </a>
+     </div>
+    <mat-card>
+        <mat-card-content>
+
+          <div fxLayout="column wrap" fxLayoutGap="15px">
+
+            <div fxLayout="row wrap" fxFlex>
+                <div fxFlex="25%"><strong>Role Name:</strong></div>
+                <div fxFlex="75%">{{role.name}}</div>
+              </div>
+        
+              <div fxLayout="row wrap" fxFlex>
+                <div fxFlex="25%"><strong>Role Description:</strong></div>
+                <div fxFlex="75%">{{role.description}}</div>
+              </div>
+
+          </div>
+
+          
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content>
+            <app-roleuser [accounts]='role.users'></app-roleuser>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    
+
+
+

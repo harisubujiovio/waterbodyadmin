@@ -1,0 +1,39 @@
+
+<form [formGroup]="uploadForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>Upload Map</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+                <div>
+                    <mat-toolbar>
+                      <!-- Display files names -->
+                      <input matInput formControlName="fileName" readonly />
+                      <!-- Browse Button -->
+                      <button mat-flat-button color="primary">Browse File</button>
+                    </mat-toolbar>
+                    <!-- Fetch selected filed on change -->
+                    <input
+                      type="file"
+                      #fileInput
+                      id="uploadFile"
+                      (change)="onFileSelect($event)"
+                      name="uploadFile"
+                      multiple="multiple"
+                    />
+                  </div>
+            </mat-form-field>
+          </div>
+        </div>
+        
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" [class.spinner]="loading" [disabled]="!uploadForm.valid">Submit</button>
+        <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  

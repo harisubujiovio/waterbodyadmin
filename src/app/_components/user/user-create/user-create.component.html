@@ -1,0 +1,121 @@
+<form [formGroup]="userForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+        <mat-card-header>
+            <mat-card-title>{{ formTitle }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter User Name" formControlName="username">
+                        <mat-error *ngIf="userForm.controls['username'].hasError('required')">
+                            User name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row" *ngIf="isAddMode">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter Password" formControlName="password">
+                        <mat-error *ngIf="userForm.controls['password'].hasError('required')">
+                            Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row" *ngIf="isAddMode">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter Confirm Password" formControlName="confirmPassword">
+                        <mat-error *ngIf="userForm.controls['confirmPassword'].hasError('required')">
+                            Confirm Password is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter First Name" formControlName="first_name">
+                        <mat-error *ngIf="userForm.controls['first_name'].hasError('required')">
+                            First Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter Last Name" formControlName="last_name">
+                        <mat-error *ngIf="userForm.controls['last_name'].hasError('required')">
+                            Last Name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter Email Address" formControlName="email">
+                        <mat-error *ngIf="userForm.controls['email'].hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter Mobile Number" formControlName="mobileNumber" maxlength="10">
+                        <mat-error *ngIf="userForm.controls['mobileNumber'].hasError('required')">
+                            Mobile Number is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="userForm.controls['mobileNumber'].hasError('pattern')">
+                            <strong>Please, Enter 10 digit Mobile Number.</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter Phone Number" formControlName="phoneNumber" maxlength="8">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter Address" formControlName="address">
+                        <mat-error *ngIf="userForm.controls['address'].hasError('required')">
+                            Address is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <mat-label>Select Role</mat-label>
+                        <mat-select formControlName="role">
+                            <mat-option *ngFor="
+                            let role of roles" [value]="role.id">
+                                {{ role.name }}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="userForm.controls['role'].hasError('required')">
+                            You must make a selection
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" [class.spinner]="loading"
+                [disabled]="!userForm.valid">Submit</button>
+            <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

@@ -1,0 +1,10 @@
+.mat-card {
+    padding: 0 !important;
+}
+
+.mat-card-content {
+    padding: 5px !important;
+}
+.login-form {
+    padding: 20px;
+}
