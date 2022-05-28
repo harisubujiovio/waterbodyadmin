@@ -63,9 +63,22 @@
                 <mat-icon>panorama_vertical</mat-icon>
                 Tanks
             </mat-list-item>
-            <mat-list-item routerLink="/question/questions">
-                <mat-icon>help_outline</mat-icon>Questions
-            </mat-list-item>
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    Master Entities
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                    <a mat-list-item routerLink="/taluk/taluks">
+                        <mat-icon>list_alt</mat-icon>Taluk
+                    </a>
+                    <a mat-list-item routerLink="/block/blocks">
+                        <mat-icon>list_alt</mat-icon>Block
+                    </a>
+                    <a mat-list-item routerLink="/panchayat/panchayats">
+                        <mat-icon>list_alt</mat-icon>Panchayat
+                    </a>
+                </mat-nav-list>
+            </mat-expansion-panel>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content [ngStyle]="{ 'margin-left.px' : contentMargin }">

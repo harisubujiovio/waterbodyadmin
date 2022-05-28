@@ -1,4 +1,4 @@
-export interface Profile {
+export class Profile {
     user_id?: number;
     mobileNumber: string;
     phoneNumber: string;

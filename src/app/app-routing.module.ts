@@ -43,6 +43,21 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./_components/surveyQuestion/question.module').then(m => m.QuestionModule)
   },
+  {
+    path: 'taluk' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/taluks/taluk.module').then(m => m.TalukModule)
+  },
+  {
+    path: 'block' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/block/block.module').then(m => m.BlockModule)
+  },
+  {
+    path: 'panchayat' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/panchayat/panchayat.module').then(m => m.PanchayatModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,23 @@
+.container {
+    padding: 20px;
+}
+
+.flexcontainer {
+    margin: 15px;
+}
+
+.mat-column-name {
+    flex: 0 0 30%;
+}
+.mat-column-blockname {
+    flex: 0 0 30%;
+}
+.mat-column-details {
+    flex: 0 0 10%;
+}
+.mat-column-update {
+    flex: 0 0 10%;
+}
+.mat-column-delete {
+    flex: 0 0 10%;
+}
