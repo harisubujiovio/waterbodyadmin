@@ -65,7 +65,7 @@
             </mat-list-item>
             <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
                 <mat-expansion-panel-header>
-                    Master Entities
+                    General Entities
                 </mat-expansion-panel-header>
                 <mat-nav-list dense>
                     <a mat-list-item routerLink="/taluk/taluks">
@@ -76,6 +76,63 @@
                     </a>
                     <a mat-list-item routerLink="/panchayat/panchayats">
                         <mat-icon>list_alt</mat-icon>Panchayat
+                    </a>
+                    
+                </mat-nav-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    WaterBody Entites
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                    <a mat-list-item routerLink="/waterbodytype/waterbodytypes">
+                        <mat-icon>list_alt</mat-icon>Type
+                    </a>
+                    <a mat-list-item routerLink="/waterbodyownership/waterbodyownerships">
+                        <mat-icon>list_alt</mat-icon>Ownership
+                    </a>
+                    <a mat-list-item routerLink="/waterbodysource/waterbodysources">
+                        <mat-icon>list_alt</mat-icon>Source
+                    </a>
+                   
+                    <a mat-list-item routerLink="/waterbodyexoticspecies/waterbodyexoticspecies">
+                        <mat-icon>list_alt</mat-icon>Exotic Species
+                    </a>
+                   
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    Stream
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                    <a mat-list-item routerLink="/waterbodycrosssection/waterbodycrosssections">
+                        <mat-icon>list_alt</mat-icon>Cross Section Type
+                    </a>
+                    <a mat-list-item routerLink="/waterbodystreamissue/waterbodystreamissues">
+                        <mat-icon>list_alt</mat-icon>Stream Issue
+                    </a>
+                    
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    Bund
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                    <a mat-list-item routerLink="/waterbodybund/waterbodybunds">
+                        <mat-icon>list_alt</mat-icon>Bund Functionality
+                    </a>
+                    <a mat-list-item routerLink="/waterbodytankissue/waterbodytankissues">
+                        <mat-icon>list_alt</mat-icon>Tank Issue
+                    </a>
+                    <a mat-list-item routerLink="/waterbodystonepitching/waterbodystonepitchings">
+                        <mat-icon>list_alt</mat-icon>Stone Pitching
+                    </a>
+                    <a mat-list-item routerLink="/waterbodystonepitchingcondition/waterbodystonepitchingconditions">
+                        <mat-icon>list_alt</mat-icon>Pitching Condition
                     </a>
                 </mat-nav-list>
             </mat-expansion-panel>

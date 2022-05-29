@@ -58,8 +58,57 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./_components/panchayat/panchayat.module').then(m => m.PanchayatModule)
   },
+  {
+    path: 'waterbodytype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodytype/waterbodytype.module').then(m => m.WaterBodyTypeModule)
+  },
+  {
+    path: 'waterbodyownership' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyownership/waterbodyownership.module').then(m => m.WaterBodyOwnershipModule)
+  },
+  {
+    path: 'waterbodysource' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodysource/waterbodysource.module').then(m => m.WaterBodySourceModule)
+  },
+  {
+    path: 'waterbodycrosssection' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodycrosssection/waterbodycrosssection.module').then(m => m.WaterBodyCrossSectionModule)
+  },
+  {
+    path: 'waterbodystreamissue' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodystreamissue/waterbodystreamissue.module').then(m => m.WaterBodyStreamIssueModule)
+  },
+  {
+    path: 'waterbodyexoticspecies' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyexoticspecies/waterbodyexoticspecies.module').then(m => m.WaterBodyExoticSpecies)
+  },
+  {
+    path: 'waterbodybund' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodybund/waterbodybund.module').then(m => m.WaterBodyBundModule)
+  },
+  {
+    path: 'waterbodytankissue' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodytankissue/waterbodytankissue.module').then(m => m.WaterBodyTankIssueModule)
+  },
+  {
+    path: 'waterbodystonepitching' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodystonepitching/waterbodystonepitching.module').then(m => m.WaterBodyStonePitchingModule)
+  },
+  {
+    path: 'waterbodystonepitchingcondition' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodystonepitchingcondition/waterbodystonepitchingcondition.module').then(m => m.WaterBodyStonePitchingConditionModule)
+  },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
