@@ -25,4 +25,4 @@ import { routes } from './waterbodyexoticspecies-routing/waterbodyexoticspecies-
     RouterModule.forChild(routes)
   ]
 })
-export class WaterBodyExoticSpecies { }
+export class WaterBodyExoticSpeciesModule { }

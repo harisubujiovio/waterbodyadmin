@@ -86,7 +86,7 @@ const routes: Routes = [
   {
     path: 'waterbodyexoticspecies' , component: AdminComponent,
     canActivate: [AuthGuard],
-    loadChildren: () => import('./_components/waterbodyexoticspecies/waterbodyexoticspecies.module').then(m => m.WaterBodyExoticSpecies)
+    loadChildren: () => import('./_components/waterbodyexoticspecies/waterbodyexoticspecies.module').then(m => m.WaterBodyExoticSpeciesModule)
   },
   {
     path: 'waterbodybund' , component: AdminComponent,
@@ -107,6 +107,71 @@ const routes: Routes = [
     path: 'waterbodystonepitchingcondition' , component: AdminComponent,
     canActivate: [AuthGuard],
     loadChildren: () => import('./_components/waterbodystonepitchingcondition/waterbodystonepitchingcondition.module').then(m => m.WaterBodyStonePitchingConditionModule)
+  },
+  {
+    path: 'waterbodysluice' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodysluice/waterbodysluice.module').then(m => m.WaterBodySluiceModule)
+  },
+  {
+    path: 'waterbodydepthsilllevel' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodydepthsilllevel/waterbodydepthsilllevel.module').then(m => m.WaterBodyDepthSillLevelModule)
+  },
+  {
+    path: 'waterbodyshutter' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyshutter/waterbodyshutter.module').then(m => m.WaterBodyShutterModule)
+  },
+  {
+    path: 'waterbodycondition' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodycondition/waterbodycondition.module').then(m => m.WaterBodyConditionModule)
+  },
+  {
+    path: 'waterbodyshuttercondition' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyshuttercondition/waterbodyshuttercondition.module').then(m => m.WaterBodyShutterConditionModule)
+  },
+  {
+    path: 'waterbodysurplusweir' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodysurplusweir/waterbodysurplusweir.module').then(m => m.WaterBodySurpluseWeirModule)
+  },
+  {
+    path: 'waterbodymwlstone' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodymwlstone/waterbodymwlstone.module').then(m => m.WaterBodyMwlStoneModule)
+  },
+  {
+    path: 'waterbodyirrigationtankfunction' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyirrigationtankfunction/waterbodyirrigationtankfunction.module').then(m => m.WaterBodyIrrigationTankFunctionModule)
+  },
+  {
+    path: 'waterbodyayacutnoncultivation' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyayacutnoncultivation/waterbodyayacutnoncultivation.module').then(m => m.WaterbodyayacutnoncultivationModule)
+  },
+  {
+    path: 'waterbodycropping' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodycropping/waterbodycropping.module').then(m => m.WaterBodyCroppingModule)
+  },
+  {
+    path: 'waterbodyinvestmentnature' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyinvestmentnature/waterbodyinvestmentnature.module').then(m => m.WaterBodyInvestmentNatureModule)
+  },
+  {
+    path: 'waterbodyfamilynature' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyfamilynature/waterbodyfamilynature.module').then(m => m.WaterBodyFamilyNatureModule)
+  },
+  {
+    path: 'waterbodyfamilydistributionland' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyfamilydistributionland/waterbodyfamilydistributionland.module').then(m => m.WaterBodyFamilyDistributionLandModule)
   },
 ];
 @NgModule({

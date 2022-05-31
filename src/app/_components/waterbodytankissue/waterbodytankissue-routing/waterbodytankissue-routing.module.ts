@@ -6,7 +6,7 @@ import { WaterbodytankissueCreateComponent } from '../waterbodytankissue-create/
 import { WaterbodytankissueDetailComponent } from '../waterbodytankissue-detail/waterbodytankissue-detail.component';
 
 export const routes: Routes = [
-    { path: 'waterbodytankissues', component: WaterbodytankissueListComponent },
+    { path: '', component: WaterbodytankissueListComponent },
     { path: 'create', component: WaterbodytankissueCreateComponent },
     { path: 'edit/:id', component: WaterbodytankissueCreateComponent },
     { path: 'details/:id', component: WaterbodytankissueDetailComponent }

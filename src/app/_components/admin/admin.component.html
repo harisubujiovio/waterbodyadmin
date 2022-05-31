@@ -85,20 +85,65 @@
                     WaterBody Entites
                 </mat-expansion-panel-header>
                 <mat-nav-list dense>
-                    <a mat-list-item routerLink="/waterbodytype/waterbodytypes">
+                    <a mat-list-item routerLink="/waterbodytype">
                         <mat-icon>list_alt</mat-icon>Type
                     </a>
-                    <a mat-list-item routerLink="/waterbodyownership/waterbodyownerships">
+                    <a mat-list-item routerLink="/waterbodyownership">
                         <mat-icon>list_alt</mat-icon>Ownership
                     </a>
-                    <a mat-list-item routerLink="/waterbodysource/waterbodysources">
+                    <a mat-list-item routerLink="/waterbodysource">
                         <mat-icon>list_alt</mat-icon>Source
                     </a>
                    
-                    <a mat-list-item routerLink="/waterbodyexoticspecies/waterbodyexoticspecies">
+                    <a mat-list-item routerLink="/waterbodyexoticspecies">
                         <mat-icon>list_alt</mat-icon>Exotic Species
                     </a>
-                   
+
+                    <a mat-list-item routerLink="/waterbodysluice">
+                        <mat-icon>list_alt</mat-icon>Sluice / Surplus Type
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodydepthsilllevel">
+                        <mat-icon>list_alt</mat-icon>Depth Sill Level
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodycondition">
+                        <mat-icon>list_alt</mat-icon>Conditions
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodysurplusweir">
+                        <mat-icon>list_alt</mat-icon>Surplus Weirs
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodymwlstone">
+                        <mat-icon>list_alt</mat-icon>MWL Stone
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodyirrigationtankfunction">
+                        <mat-icon>list_alt</mat-icon>Tank Function
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodyayacutnoncultivation">
+                        <mat-icon>list_alt</mat-icon>Ayacutnoncultivation
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodycropping">
+                        <mat-icon>list_alt</mat-icon>Cropping
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodyinvestmentnature">
+                        <mat-icon>list_alt</mat-icon>Nature Investment
+                    </a>
+                    
+                    <a mat-list-item routerLink="/waterbodyfamilynature">
+                        <mat-icon>list_alt</mat-icon>Family Nature
+                    </a>
+
+                    <a mat-list-item routerLink="/waterbodyfamilydistributionland">
+                        <mat-icon>list_alt</mat-icon>Distribution Land
+                    </a>
+
+
                 </mat-nav-list>
             </mat-expansion-panel>
 
@@ -107,11 +152,26 @@
                     Stream
                 </mat-expansion-panel-header>
                 <mat-nav-list dense>
-                    <a mat-list-item routerLink="/waterbodycrosssection/waterbodycrosssections">
+                    <a mat-list-item routerLink="/waterbodycrosssection">
                         <mat-icon>list_alt</mat-icon>Cross Section Type
                     </a>
-                    <a mat-list-item routerLink="/waterbodystreamissue/waterbodystreamissues">
+                    <a mat-list-item routerLink="/waterbodystreamissue">
                         <mat-icon>list_alt</mat-icon>Stream Issue
+                    </a>
+                    
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    Shutter
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                    <a mat-list-item routerLink="/waterbodyshutter">
+                        <mat-icon>list_alt</mat-icon>Shutter
+                    </a>
+                    <a mat-list-item routerLink="/waterbodyshuttercondition">
+                        <mat-icon>list_alt</mat-icon>Shutter Condition
                     </a>
                     
                 </mat-nav-list>
@@ -122,16 +182,16 @@
                     Bund
                 </mat-expansion-panel-header>
                 <mat-nav-list dense>
-                    <a mat-list-item routerLink="/waterbodybund/waterbodybunds">
+                    <a mat-list-item routerLink="/waterbodybund">
                         <mat-icon>list_alt</mat-icon>Bund Functionality
                     </a>
-                    <a mat-list-item routerLink="/waterbodytankissue/waterbodytankissues">
+                    <a mat-list-item routerLink="/waterbodytankissue">
                         <mat-icon>list_alt</mat-icon>Tank Issue
                     </a>
-                    <a mat-list-item routerLink="/waterbodystonepitching/waterbodystonepitchings">
+                    <a mat-list-item routerLink="/waterbodystonepitching">
                         <mat-icon>list_alt</mat-icon>Stone Pitching
                     </a>
-                    <a mat-list-item routerLink="/waterbodystonepitchingcondition/waterbodystonepitchingconditions">
+                    <a mat-list-item routerLink="/waterbodystonepitchingcondition">
                         <mat-icon>list_alt</mat-icon>Pitching Condition
                     </a>
                 </mat-nav-list>

@@ -6,7 +6,7 @@ import { WaterbodystonepitchingCreateComponent } from '../waterbodystonepitching
 import { WaterbodystonepitchingDetailComponent } from '../waterbodystonepitching-detail/waterbodystonepitching-detail.component';
 
 export const routes: Routes = [
-    { path: 'waterbodystonepitchings', component: WaterbodystonepitchingListComponent },
+    { path: '', component: WaterbodystonepitchingListComponent },
     { path: 'create', component: WaterbodystonepitchingCreateComponent },
     { path: 'edit/:id', component: WaterbodystonepitchingCreateComponent },
     { path: 'details/:id', component: WaterbodystonepitchingDetailComponent }

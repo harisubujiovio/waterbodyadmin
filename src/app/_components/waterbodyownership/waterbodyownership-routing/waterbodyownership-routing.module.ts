@@ -6,7 +6,7 @@ import { WaterbodyownershipCreateComponent } from '../waterbodyownership-create/
 import { WaterbodyownershipDetailComponent } from '../waterbodyownership-detail/waterbodyownership-detail.component';
 
 export const routes: Routes = [
-    { path: 'waterbodyownerships', component: WaterbodyownershipListComponent },
+    { path: '', component: WaterbodyownershipListComponent },
     { path: 'create', component: WaterbodyownershipCreateComponent },
     { path: 'edit/:id', component: WaterbodyownershipCreateComponent },
     { path: 'details/:id', component: WaterbodyownershipDetailComponent }

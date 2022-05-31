@@ -20,6 +20,7 @@ import { SharedModule } from './_shared/shared.module';
     AdminComponent,
     NotFoundComponent,
     ServerErrorComponent,
+    
   ],
   imports: [
     BrowserModule,

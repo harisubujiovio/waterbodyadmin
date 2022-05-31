@@ -7,7 +7,7 @@ import { WaterbodybundDetailComponent } from '../waterbodybund-detail/waterbodyb
 
 
 export const routes: Routes = [
-    { path: 'waterbodybunds', component: WaterbodybundListComponent },
+    { path: '', component: WaterbodybundListComponent },
     { path: 'create', component: WaterbodybundCreateComponent },
     { path: 'edit/:id', component: WaterbodybundCreateComponent },
     { path: 'details/:id', component: WaterbodybundDetailComponent }

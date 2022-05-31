@@ -7,7 +7,7 @@ import { WaterbodycrosssectionDetailComponent } from '../waterbodycrosssection-d
 
 
 export const routes: Routes = [
-    { path: 'waterbodycrosssections', component: WaterbodycrosssectionListComponent },
+    { path: '', component: WaterbodycrosssectionListComponent },
     { path: 'create', component: WaterbodycrosssectionCreateComponent },
     { path: 'edit/:id', component: WaterbodycrosssectionCreateComponent },
     { path: 'details/:id', component: WaterbodycrosssectionDetailComponent }

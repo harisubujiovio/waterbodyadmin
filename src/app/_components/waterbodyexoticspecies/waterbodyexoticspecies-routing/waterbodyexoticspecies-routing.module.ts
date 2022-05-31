@@ -7,7 +7,7 @@ import { WaterbodyexoticspeciesDetailComponent } from '../waterbodyexoticspecies
 
 
 export const routes: Routes = [
-    { path: 'waterbodyexoticspecies', component: WaterbodyexoticspeciesListComponent },
+    { path: '', component: WaterbodyexoticspeciesListComponent },
     { path: 'create', component: WaterbodyexoticspeciesCreateComponent },
     { path: 'edit/:id', component: WaterbodyexoticspeciesCreateComponent },
     { path: 'details/:id', component: WaterbodyexoticspeciesDetailComponent }

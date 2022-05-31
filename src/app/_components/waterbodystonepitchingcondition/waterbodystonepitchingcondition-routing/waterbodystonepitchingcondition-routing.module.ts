@@ -6,7 +6,7 @@ import { WaterbodystonepitchingconditionCreateComponent } from '../waterbodyston
 
 
 export const routes: Routes = [
-    { path: 'waterbodystonepitchingconditions', component: WaterbodystonepitchingconditionListComponent },
+    { path: '', component: WaterbodystonepitchingconditionListComponent },
     { path: 'create', component: WaterbodystonepitchingconditionCreateComponent },
     { path: 'edit/:id', component: WaterbodystonepitchingconditionCreateComponent },
     { path: 'details/:id', component: WaterbodystonepitchingconditionListComponent }
