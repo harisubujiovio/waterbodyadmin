@@ -173,6 +173,56 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./_components/waterbodyfamilydistributionland/waterbodyfamilydistributionland.module').then(m => m.WaterBodyFamilyDistributionLandModule)
   },
+  {
+    path: 'waterbodytankuniqueness' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodytankuniqueness/waterbodytankuniqueness.module').then(m => m.WaterBodyTankUniquenessModule)
+  },
+  {
+    path: 'waterbodyboundarydroppoint' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyboundarydroppoint/waterbodyboundarydroppoint.module').then(m => m.WaterbodyBoundaryDropPointModule)
+  },
+  {
+    path: 'waterbodytempletanktype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodytempletanktype/waterbodytempletanktype.module').then(m => m.WaterBodyTempleTankTypeModule)
+  },
+  {
+    path: 'waterbodyinlettype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyinlettype/waterbodyinlettype.module').then(m => m.WaterBodyInletTypeModule)
+  },
+  {
+    path: 'waterbodyslittrap' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyslittrap/waterbodyslittrap.module').then(m => m.WaterBodySlitTrapModule)
+  },
+  {
+    path: 'waterbodyoutlettype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyoutlettype/waterbodyoutlettype.module').then(m => m.WaterBodyOutletTypeModule)
+  },
+  {
+    path: 'waterbodyghatcondition' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyghatcondition/waterbodyghatcondition.module').then(m => m.WaterBodyGhatConditionModule)
+  },
+  {
+    path: 'waterbodyfencecondition' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyfencecondition/waterbodyfencecondition.module').then(m => m.WaterBodyFenceConditionModule)
+  },
+  {
+    path: 'waterbodyfencetype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyfencetype/waterbodyfencetype.module').then(m => m.WaterBodyFenceTypeModule)
+  },
+  {
+    path: 'waterbodyooranifunction' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyooranifunction/waterbodyooranifunction.module').then(m => m.WaterBodyOoraniFunctionModule)
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
