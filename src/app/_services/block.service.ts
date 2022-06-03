@@ -13,6 +13,6 @@ export class BlockService extends ResourceService<Resource> {
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/blocks/';
+    return '/waterBodyAdmin/blocks';
   }
 }

@@ -1,1 +1,41 @@
-<p>panchayats-create works!</p>
+<form [formGroup]="resourceForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+        <mat-card-header>
+            <mat-card-title>{{ formTitle }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <input matInput placeholder="Enter Panchayat Name" formControlName="name">
+                        <mat-error *ngIf="resourceForm.controls['name'].hasError('required')">
+                            Panchayat name is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <mat-label>Select Block</mat-label>
+                        <mat-select formControlName="blockId">
+                            <mat-option *ngFor="
+                            let block of blocks" [value]="block.id">
+                                {{ block.name }}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="resourceForm.controls['blockId'].hasError('required')">
+                            You must make a selection
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" [class.spinner]="loading"
+                [disabled]="!resourceForm.valid">Submit</button>
+            <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

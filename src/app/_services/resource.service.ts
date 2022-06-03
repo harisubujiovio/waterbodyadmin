@@ -20,6 +20,12 @@ export abstract class ResourceService<T> {
   fromServerModel(json: any): T {
     return json;
   }
+  getDictionary(): Observable<T[]> {
+    return this.httpClient.get<T[]>(`${this.APIUrl}/All`)
+      .pipe(
+        catchError(handleError<T[]>('getDictionary'))
+      );
+  }
 
   getList(sortField: string,sortOrder: string,filterValue: string, pageNumber: number, pageSize: number): Observable<T[]> {
     let offset = pageNumber * pageSize

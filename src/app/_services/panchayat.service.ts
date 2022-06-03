@@ -13,6 +13,6 @@ export class PanchayatService extends ResourceService<Panchayat> {
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/panchayats/';
+    return '/waterBodyAdmin/panchayats';
   }
 }

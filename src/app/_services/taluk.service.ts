@@ -13,6 +13,6 @@ export class TalukService extends ResourceService<Resource> {
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/taluks/';
+    return '/waterBodyAdmin/taluks';
   }
 }
