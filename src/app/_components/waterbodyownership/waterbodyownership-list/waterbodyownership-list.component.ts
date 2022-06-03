@@ -5,7 +5,6 @@ import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 import { merge, tap } from 'rxjs';
 import { Resource } from 'src/app/_model/Resource';
-import { WaterbodytypeService } from 'src/app/_services/waterbodytype.service';
 import { WaterbodytypeownershipService } from 'src/app/_services/waterbodytypeownership.service';
 import { ConfirmationDialogComponent } from 'src/app/_shared/dialogs/confirmation-dialog/confirmation-dialog/confirmation-dialog.component';
 import { ErrorHandlerService } from 'src/app/_shared/error-handler.service';
@@ -18,7 +17,7 @@ import { ResourceDataSource } from 'src/app/_shared/resource-datasource';
 })
 export class WaterbodyownershipListComponent implements OnInit {
   dataSource: ResourceDataSource<Resource>;
-  displayedColumns = ["name", "details", "update", "delete"];
+  displayedColumns = ["name", "update", "delete"];
   dataLength: number
   private dialogConfig: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;
