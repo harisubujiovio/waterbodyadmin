@@ -46,14 +46,17 @@ export class ErrorHandlerService {
   }
  
  
-  private createErrorMessage(error: HttpErrorResponse){
-    console.log(error);
-    if (error.status === 0 && error.error instanceof ProgressEvent) {
+  private createErrorMessage(response: HttpErrorResponse){
+    console.log(response);
+    if (response.status === 0 && response.error instanceof ProgressEvent) {
       this.errorMessage = 'A client-side or network error occurred.';
+    }
+    else if (response.status === 400 && response.error.name instanceof Array) {
+      this.errorMessage = response.error.name[0];
     }
     else
     {
-      this.errorMessage = error.error ? error.error : error.statusText;
+      this.errorMessage = response.error ? response.error : response.statusText;
     }
     
   }

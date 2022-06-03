@@ -13,6 +13,6 @@ export class WaterbodyghatconditionService extends ResourceService<Resource>{
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodyghatconditions/';
+    return '/waterBodyAdmin/waterbodyghatconditions';
   }
 }

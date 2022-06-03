@@ -13,6 +13,6 @@ export class WaterbodyirrigationtankfunctionService extends ResourceService<Reso
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodyirrigationtankfunctions/';
+    return '/waterBodyAdmin/waterbodyirrigationtankfunctions';
   }
 }

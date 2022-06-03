@@ -13,6 +13,6 @@ export class WaterbodytempletanktypeService extends ResourceService<Resource>{
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodytempletanktypes/';
+    return '/waterBodyAdmin/waterbodytempletanktypes';
   }
 }

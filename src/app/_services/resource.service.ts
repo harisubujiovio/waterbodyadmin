@@ -38,7 +38,7 @@ export abstract class ResourceService<T> {
   }
 
   get(id: string | number): Observable<T> {
-    return this.httpClient.get<T>(`/${this.APIUrl}}/${id}`)
+    return this.httpClient.get<T>(`${this.APIUrl}/${id}`)
       .pipe(
         map((json) => this.fromServerModel(json)),
         catchError(handleError<T>('get'))
@@ -46,23 +46,25 @@ export abstract class ResourceService<T> {
   }
 
   create(resource: T): Observable<any> {
-    return this.httpClient.post(`/${this.APIUrl}}`, this.toServerModel(resource))
+     console.log(`${this.APIUrl}`)
+    return this.httpClient.post(`${this.APIUrl}/`, this.toServerModel(resource))
       .pipe(
         catchError(handleError<T>('create'))
       );
   }
 
   delete(id: string | number): Observable<any> {
-    return this.httpClient.delete(`/${this.APIUrl}}/${id}`) 
+    return this.httpClient.delete(`${this.APIUrl}/${id}`) 
       .pipe(
         catchError(handleError<T>('delete'))
       );
   }
 
-  update(resource: T) {
-    return this.httpClient.put(`/${this.APIUrl}}`,this.toServerModel(resource))
+  update(id: string | number,resource: T) {
+    return this.httpClient.patch(`${this.APIUrl}/${id}`,this.toServerModel(resource))
       .pipe(
         catchError(handleError<T>('update'))
       );
   }
+
 }

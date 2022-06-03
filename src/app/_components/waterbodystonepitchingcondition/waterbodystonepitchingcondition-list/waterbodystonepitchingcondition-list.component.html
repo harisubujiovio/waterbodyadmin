@@ -6,7 +6,7 @@
                 <input matInput placeholder="Search By Name" value="" (keyup)="applyFilter($event)">
             </mat-form-field>
     
-            <a [routerLink]="['/waterbodystonepitching/create']" mat-fab color="primary">
+            <a [routerLink]="['/waterbodystonepitchingcondition/create']" mat-fab color="primary">
                 <mat-icon>add</mat-icon>
             </a>
         </div>
@@ -23,7 +23,7 @@
                 <mat-cell *matCellDef="let resource">{{resource.name}}</mat-cell>
             </ng-container>
 
-            <ng-container matColumnDef="details">
+            <!-- <ng-container matColumnDef="details">
                 <mat-header-cell *matHeaderCellDef>Details
                 </mat-header-cell>
                 <mat-cell *matCellDef="let resource">
@@ -31,7 +31,7 @@
                         <mat-icon class="mat-18">reorder</mat-icon>
                     </button>
                 </mat-cell>
-            </ng-container>
+            </ng-container> -->
 
             <ng-container matColumnDef="update">
                 <mat-header-cell *matHeaderCellDef>Update

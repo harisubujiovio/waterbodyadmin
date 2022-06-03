@@ -13,6 +13,6 @@ export class WaterbodyfamilydistributionlandService extends ResourceService<Reso
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodyfamilydistributionlands/';
+    return '/waterBodyAdmin/waterbodyfamilydistributionlands';
   }
 }

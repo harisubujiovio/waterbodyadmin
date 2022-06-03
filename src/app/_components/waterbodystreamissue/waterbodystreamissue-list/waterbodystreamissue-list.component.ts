@@ -67,11 +67,11 @@ export class WaterbodystreamissueListComponent implements OnInit {
         this.paginator.pageSize);
     }
     public redirectToDetails = (id: string) => {
-      let url: string = `/waterbodytype/details/${id}`;
+      let url: string = `/waterbodystreamissue/details/${id}`;
       this.router.navigate([url]);
     }
     public redirectToUpdate = (id: string) => {
-      let url: string = `/waterbodytype/edit/${id}`;
+      let url: string = `/waterbodystreamissue/edit/${id}`;
       this.router.navigate([url]);
     }
 

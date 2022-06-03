@@ -13,6 +13,6 @@ export class WaterbodyinlettypeService extends ResourceService<Resource>{
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodyinlettypes/';
+    return '/waterBodyAdmin/waterbodyinlettypes';
   }
 }

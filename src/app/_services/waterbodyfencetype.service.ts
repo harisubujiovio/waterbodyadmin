@@ -13,6 +13,6 @@ export class WaterbodyfencetypeService extends ResourceService<Resource>{
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodyfencetypes/';
+    return '/waterBodyAdmin/waterbodyfencetypes';
   }
 }

@@ -18,7 +18,7 @@ import { ResourceDataSource } from 'src/app/_shared/resource-datasource';
 export class WaterbodyfamilydistributionlandListComponent implements OnInit {
 
   dataSource: ResourceDataSource<Resource>;
-  displayedColumns = ["name", "details", "update", "delete"];
+  displayedColumns = ["name", "update", "delete"];
   dataLength: number
   private dialogConfig: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -67,11 +67,11 @@ export class WaterbodyfamilydistributionlandListComponent implements OnInit {
         this.paginator.pageSize);
     }
     public redirectToDetails = (id: string) => {
-      let url: string = `/waterbodyfamilydistibutionland/details/${id}`;
+      let url: string = `/waterbodyfamilydistributionland/details/${id}`;
       this.router.navigate([url]);
     }
     public redirectToUpdate = (id: string) => {
-      let url: string = `/waterbodyfamilydistibutionland/edit/${id}`;
+      let url: string = `/waterbodyfamilydistributionland/edit/${id}`;
       this.router.navigate([url]);
     }
 

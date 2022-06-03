@@ -13,6 +13,6 @@ export class WaterbodyslittrapService extends ResourceService<Resource>{
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodyslittraps/';
+    return '/waterBodyAdmin/waterbodyslittraps';
   }
 }

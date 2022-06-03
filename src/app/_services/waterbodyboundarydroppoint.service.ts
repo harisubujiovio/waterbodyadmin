@@ -13,6 +13,6 @@ export class WaterbodyboundarydroppointService extends ResourceService<Resource>
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodyayacutnoncultivations/';
+    return '/waterBodyAdmin/waterbodyboundarydroppoints';
   }
 }

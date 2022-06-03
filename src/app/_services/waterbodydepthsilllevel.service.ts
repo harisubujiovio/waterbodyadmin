@@ -13,6 +13,6 @@ export class WaterbodydepthsilllevelService extends ResourceService<Resource> {
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodydepthsilllevels/';
+    return '/waterBodyAdmin/waterbodydepthsilllevels';
   }
 }

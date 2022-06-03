@@ -18,7 +18,7 @@ import { ResourceDataSource } from 'src/app/_shared/resource-datasource';
 export class WaterbodystonepitchingconditionListComponent implements OnInit {
 
   dataSource: ResourceDataSource<Resource>;
-  displayedColumns = ["name", "details", "update", "delete"];
+  displayedColumns = ["name", "update", "delete"];
   dataLength: number
   private dialogConfig: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -67,11 +67,11 @@ export class WaterbodystonepitchingconditionListComponent implements OnInit {
         this.paginator.pageSize);
     }
     public redirectToDetails = (id: string) => {
-      let url: string = `/waterbodystonepitching/details/${id}`;
+      let url: string = `/waterbodystonepitchingcondition/details/${id}`;
       this.router.navigate([url]);
     }
     public redirectToUpdate = (id: string) => {
-      let url: string = `/waterbodystonepitching/edit/${id}`;
+      let url: string = `/waterbodystonepitchingcondition/edit/${id}`;
       this.router.navigate([url]);
     }
 

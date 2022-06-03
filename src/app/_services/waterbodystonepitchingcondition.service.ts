@@ -13,6 +13,6 @@ export class WaterbodystonepitchingconditionService extends ResourceService<Reso
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodystonepitchingconditions/';
+    return '/waterBodyAdmin/waterbodystonepitchingconditions';
   }
 }

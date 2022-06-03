@@ -13,6 +13,6 @@ export class WaterbodytankuniquenessService extends ResourceService<Resource>{
   }
 
   getResourceUrl(): string {
-    return '/waterBodyAdmin/waterbodytankuniqueness/';
+    return '/waterBodyAdmin/waterbodytankuniqueness';
   }
 }
