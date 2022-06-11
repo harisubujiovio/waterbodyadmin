@@ -48,4 +48,6 @@ export class TankService {
   deleteTank(id: string) {
     return this.http.delete<Tank>(`${environment.apiUrl}/waterBodyAdmin/tankImage/${id}/`);
   }
+
+  
 }
