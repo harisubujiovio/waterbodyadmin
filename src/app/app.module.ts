@@ -12,6 +12,20 @@ import { AuthTokenHttpInterceptorProvider } from './_http-interceptors/auth-toke
 import { NotFoundComponent } from './_error-pages/not-found/not-found/not-found.component';
 import { ServerErrorComponent } from './_error-pages/server-error/server-error/server-error.component';
 import { SharedModule } from './_shared/shared.module';
+import { NgChartsModule } from 'ng2-charts';
+import { DashboardComponent } from './_components/dashboard/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
+import { CardComponent } from './_components/card/card/card.component';
+import { WaterspreadlevelchartComponent } from './_components/charts/waterspreadlevelchart/waterspreadlevelchart.component';
+import { BundlengthchartComponent } from './_components/charts/bundlengthchart/bundlengthchart.component';
+import { ChartzoomviewerComponent } from './_components/chartzoomviewer/chartzoomviewer.component';
+import { ZoomcardComponent } from './_components/card/zoomcard/zoomcard.component';
+import { MinicardComponent } from './_components/charts/minicard/minicard.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +34,13 @@ import { SharedModule } from './_shared/shared.module';
     AdminComponent,
     NotFoundComponent,
     ServerErrorComponent,
+    DashboardComponent,
+    CardComponent,
+    WaterspreadlevelchartComponent,
+    BundlengthchartComponent,
+    ChartzoomviewerComponent,
+    ZoomcardComponent,
+    MinicardComponent,
    
   ],
   imports: [
@@ -28,7 +49,14 @@ import { SharedModule } from './_shared/shared.module';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    NgChartsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   providers: [
     AuthTokenHttpInterceptorProvider

@@ -1,0 +1,28 @@
+<!--dash.component.html-->
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+    <!--Mini Cards-->
+    <mat-grid-tile *ngFor="let mc of miniCardData" [colspan]="( cardLayout | async )?.miniCard?.cols"
+      [rowspan]="( cardLayout | async )?.miniCard?.rows">
+        <app-minicard [title]="mc.label" [value]="mc.data" [name]="mc.name"></app-minicard>
+    </mat-grid-tile>
+    <!--Charts-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols"
+      [rowspan]="( cardLayout | async )?.chart?.rows">
+      <app-card title="Water Body By Spread Level" name="WaterSpreadLevel" [chartType]=true>
+        <app-waterspreadlevelchart></app-waterspreadlevelchart>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols"
+    [rowspan]="( cardLayout | async )?.chart?.rows">
+    <app-card title="Water Body By Bundle Length" name="BundleLength" [chartType]=true>
+      <app-bundlengthchart></app-bundlengthchart>
+    </app-card>
+  </mat-grid-tile>
+    <!--Table-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows">
+      <app-card title="Card 9"><div>Table Content Here</div></app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+ </div>

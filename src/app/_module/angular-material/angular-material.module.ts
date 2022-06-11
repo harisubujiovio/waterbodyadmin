@@ -22,6 +22,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [],
@@ -46,7 +47,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatExpansionModule,
     MatMenuModule,
     MatDialogModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatGridListModule
   ],
   exports: [
     FlexLayoutModule,
@@ -70,7 +72,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatDialogModule,
     MatRadioModule,
     MatSelectModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatGridListModule
   ]
 })
 export class AngularMaterialModule { }

@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
           console.log(token)
           console.log(refreshToken)
           this.setUserSession()
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/admin/dashboard']);
         });
     }
   }
