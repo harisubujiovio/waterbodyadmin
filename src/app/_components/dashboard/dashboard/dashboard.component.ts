@@ -3,6 +3,7 @@ import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { ChartdataService } from 'src/app/_services/chartdata.service';
 import { ChartData } from 'src/app/_model/presentation/ChartData';
+import { CardSummary } from 'src/app/_model/presentation/CardSummary';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +11,7 @@ import { ChartData } from 'src/app/_model/presentation/ChartData';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  miniCardData: ChartData[];
+  miniCardData: CardSummary[];
   /** Based on the screen size, switch from standard to one column per row */
 cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
    map(({ matches }) => {
@@ -40,6 +41,7 @@ cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     this.chartdataService.getCardSummaryData().subscribe({
       next: summaryData => {
         this.miniCardData = summaryData;
+        console.log(this.miniCardData);
       }
     });
   } 

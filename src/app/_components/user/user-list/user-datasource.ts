@@ -25,9 +25,9 @@ export class UserDataSource implements DataSource<UserProfile>
         this.UsersCountSubject.complete();
     }
   
-    fetchUsers(sortField: string, sortOrder: string,filterValue: string, pageIndex = 0, pageSize = 10) {
+    fetchUsers(roleId: string,sortField: string, sortOrder: string,filterValue: string, pageIndex = 0, pageSize = 10) {
         this.loadingSubject.next(true);
-        this.userService.getUsers(
+        this.userService.getUsers(roleId,
             sortField,sortOrder,filterValue, pageIndex, pageSize).pipe(
             catchError(handleError<any>('fetchUsers', null)),
             finalize(() => this.loadingSubject.next(false))

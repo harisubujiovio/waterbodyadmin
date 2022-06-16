@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { CardSummary } from '../_model/presentation/CardSummary';
 import { ChartData } from '../_model/presentation/ChartData';
 import { ResourceService } from './resource.service';
 
@@ -27,7 +28,7 @@ export class ChartdataService extends ResourceService<ChartData>{
   }
 
   getCardSummaryData() {
-    return this.httpClient.get<ChartData[]>(`${environment.apiUrl}/waterBodyAdmin/cardsummary`);
+    return this.httpClient.get<CardSummary[]>(`${environment.apiUrl}/waterBodyAdmin/cardsummary`);
   }
 
 

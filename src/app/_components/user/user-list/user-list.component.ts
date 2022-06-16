@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { merge, tap } from 'rxjs';
 import { UserService } from 'src/app/_services/user.service';
 import { ConfirmationDialogComponent } from 'src/app/_shared/dialogs/confirmation-dialog/confirmation-dialog/confirmation-dialog.component';
@@ -23,12 +23,17 @@ export class UserListComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild('input') input: ElementRef;
   private filterValue: string = '';
+  private roleId: string = ''
   constructor(private userService: UserService, private router: Router, private dialog: MatDialog,
-    private errorService: ErrorHandlerService) { }
+    private errorService: ErrorHandlerService,private route: ActivatedRoute) { }
 
     ngOnInit(): void {
+      this.route.paramMap
+      .subscribe(params => {
+           this.roleId = params.get('roleId') || '';
+      });
       this.dataSource = new UserDataSource(this.userService);
-      this.dataSource.fetchUsers('first_name', 'asc', '');
+      this.dataSource.fetchUsers(this.roleId,'first_name', 'asc', '');
       this.dataSource.count$.subscribe(
         (length: number) => this.dataLength = length
       )
@@ -59,6 +64,7 @@ export class UserListComponent implements OnInit {
     BindUsers() {
       console.log(this.filterValue);
       this.dataSource.fetchUsers(
+        this.roleId,
         this.sort.active,
         this.sort.direction,
         this.filterValue,

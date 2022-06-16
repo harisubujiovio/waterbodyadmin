@@ -11,13 +11,14 @@ export class MinicardComponent implements OnInit {
   @Input() name: string;
   @Input() title: string;
   @Input() value: number;
+  @Input() filterKey: string;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  redirectToDetail(name: string): void {
+  redirectToDetail(name: string,filterKey: string): void {
       console.log(name);
       if(name == 'TankSummaryCard')
         this.router.navigate((['/','tank', 'tanks']))
@@ -25,6 +26,8 @@ export class MinicardComponent implements OnInit {
         this.router.navigate((['/','waterbodytype']))
       else if(name == 'UserCard')
         this.router.navigate((['/','user','users']))
+      else if(name == 'FieldWorkerCard')
+        this.router.navigate((['/','user','users',this.filterKey]))
   }
 
 }

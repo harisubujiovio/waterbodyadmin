@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.value; }
 
   authenticate() {
+    console.log('login button clicked')
     if (this.loginForm.valid) {
       console.log('login button clicked')
       this.authService.login(this.f.username, this.f.password)
@@ -56,6 +57,10 @@ export class LoginComponent implements OnInit {
         console.log(session)
         localStorage.setItem("user", JSON.stringify(session));
       })
+  }
+
+  resetPassword() {
+    console.log("Reset password button clicked");
   }
 
 }

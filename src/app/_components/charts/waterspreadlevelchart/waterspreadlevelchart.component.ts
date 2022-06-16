@@ -29,8 +29,6 @@ export class WaterspreadlevelchartComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.sub = this.chartdataService.getWaterSpreadLevelData().subscribe({
       next: chartDataArray => {
-        console.log('chart data array response')
-        console.log(chartDataArray)
         chartDataArray.forEach(li => {
           this.barChartData[0].data.push(li.data);
           this.barChartLabels.push(li.label);

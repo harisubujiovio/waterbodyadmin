@@ -18,7 +18,10 @@
                 <mat-icon>person</mat-icon><span>My Account</span>
             </button>
             <button mat-menu-item>
-                <mat-icon>help</mat-icon><span>Help</span>
+                
+                <mat-list-item routerLink="/user/resetpassword">
+                    <mat-icon>change_circle</mat-icon><span>Reset Password</span>
+                </mat-list-item>
             </button>
             <mat-divider></mat-divider>
             <button mat-menu-item (click)="signOut()">

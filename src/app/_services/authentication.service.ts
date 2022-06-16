@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, catchError, map, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ConfirmPassword, ResetPassword, UserSecret } from '../_model/presentation/usersecret';
 import { Session } from '../_model/Session';
 import { handleError } from '../_utils/errorhandler';
 
@@ -25,7 +26,15 @@ export class AuthenticationService {
         catchError(handleError<any>('login', null))
       );
   }
-
+  resetPassword(secret: UserSecret) : Observable<any> {
+    return this.http.post<any>(`${environment.apiUrl}/auth/users/set_password/`, secret);
+  }
+  sendPasswordResetNotification(email: ResetPassword) : Observable<any> {
+    return this.http.post<any>(`${environment.apiUrl}/auth/users/reset_password/`, email);
+  }
+  confirmPasswordReset(confirmPwd: ConfirmPassword) : Observable<any> {
+    return this.http.post<any>(`${environment.apiUrl}/auth/users/reset_password_confirm/`, confirmPwd);
+  }
   getAccessToken(token: any): Observable<any> {
     console.log(token);
     return this.http.post(`${environment.apiUrl}/auth/jwt/refresh/`, { token }, { headers: { 'Anonymous': '' } })

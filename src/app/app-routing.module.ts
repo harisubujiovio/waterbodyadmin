@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './_components/admin/admin.component';
 import { ChartzoomviewerComponent } from './_components/chartzoomviewer/chartzoomviewer.component';
+import { ConfirmpasswordComponent } from './_components/confirmpassword/confirmpassword.component';
 import { DashboardComponent } from './_components/dashboard/dashboard/dashboard.component';
+import { ForgetpasswordComponent } from './_components/forgetpassword/forgetpassword.component';
 import { LoginComponent } from './_components/login/login.component';
 import { AuthGuard } from './_services/guard/auth-guard.service';
 
@@ -18,6 +20,11 @@ const routes: Routes = [
         path: 'login',
         component: LoginComponent
       },
+      {
+        path: 'forgetPassword',
+        component: ForgetpasswordComponent
+      },
+      { path: 'password/reset/:uid/:token', component: ConfirmpasswordComponent },
       {
         path: 'admin', component: AdminComponent, 
       },

@@ -5,7 +5,7 @@
     <!--Mini Cards-->
     <mat-grid-tile *ngFor="let mc of miniCardData" [colspan]="( cardLayout | async )?.miniCard?.cols"
       [rowspan]="( cardLayout | async )?.miniCard?.rows">
-        <app-minicard [title]="mc.label" [value]="mc.data" [name]="mc.name"></app-minicard>
+        <app-minicard [title]="mc.label" [value]="mc.data" [name]="mc.name" [filterKey]="mc.filterKey" [icon]="mc.icon" ></app-minicard>
     </mat-grid-tile>
     <!--Charts-->
     <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols"
@@ -22,7 +22,11 @@
   </mat-grid-tile>
     <!--Table-->
     <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows">
-      <app-card title="Card 9"><div>Table Content Here</div></app-card>
+      <app-card title="Madurai WaterBody Map">
+        <!-- <app-waterbodymapviewer></app-waterbodymapviewer> -->
+        <app-maduraiwaterbodymap></app-maduraiwaterbodymap>
+      </app-card>
     </mat-grid-tile>
   </mat-grid-list>
+ 
  </div>

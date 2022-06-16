@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { UserProfile } from '../_model/presentation/UserProfile';
+import { UserSecret } from '../_model/presentation/usersecret';
 import { UserViewModel } from '../_model/presentation/UserViewModel';
 import { Profile } from '../_model/Profile';
 import { User } from '../_model/User';
@@ -15,13 +16,25 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(sortField: string, sortOrder: string, filterValue: string,
+  getUsers(roleId: string, sortField: string, sortOrder: string, filterValue: string,
     pageNumber = 0, pageSize = 10): Observable<UserViewModel> {
     let offset = pageNumber * pageSize
     sortField = sortOrder == 'desc' ? '-' + 'user__' + sortField : 'user__' + sortField
-    console.log(`${environment.apiUrl}/waterBodyAdmin/allusers/?limit=${pageSize}&offset=${offset}&ordering=${sortField}&search=${filterValue}`);
+    let params = new HttpParams()
+    .set('offset', offset.toString())
+    .set('limit', pageSize.toString())
+    .set('search', filterValue.toString())
+    .set('ordering', sortField.toString());
 
-    return this.http.get<UserViewModel>(`${environment.apiUrl}/waterBodyAdmin/allusers/?limit=${pageSize}&offset=${offset}&ordering=${sortField}&search=${filterValue}`).pipe(
+    if (roleId != '')
+    params = new HttpParams()
+    .set('offset', offset.toString())
+    .set('limit', pageSize.toString())
+    .set('search', filterValue.toString())
+    .set('ordering', sortField.toString())
+    .set('roleId', roleId.toString());
+
+    return this.http.get<UserViewModel>(`${environment.apiUrl}/waterBodyAdmin/allusers/?${params.toString()}`).pipe(
       catchError(handleError<UserViewModel>('getUsers'))
     );
   }
@@ -45,4 +58,5 @@ export class UserService {
   deleteRole(id: string,userId: number) {
     return this.http.delete<User>(`${environment.apiUrl}/waterBodyAdmin/userprofile/${id}/user/${userId}/`);
   }
+ 
 }

@@ -7,6 +7,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { routes } from './user-routing/user-routing.module';
+import { UserResetpasswordComponent } from './user-resetpassword/user-resetpassword/user-resetpassword.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { routes } from './user-routing/user-routing.module';
     UserListComponent,
     UserCreateComponent,
     UserDetailComponent,
+    UserResetpasswordComponent,
   ],
   imports: [
     CommonModule,

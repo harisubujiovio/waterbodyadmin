@@ -26,6 +26,10 @@ import { BundlengthchartComponent } from './_components/charts/bundlengthchart/b
 import { ChartzoomviewerComponent } from './_components/chartzoomviewer/chartzoomviewer.component';
 import { ZoomcardComponent } from './_components/card/zoomcard/zoomcard.component';
 import { MinicardComponent } from './_components/charts/minicard/minicard.component';
+import { WaterbodymapviewerComponent } from './_components/charts/waterbodymapviewer/waterbodymapviewer/waterbodymapviewer.component';
+import { MaduraiwaterbodymapComponent } from './_components/charts/maduraiwaterbodymap/maduraiwaterbodymap/maduraiwaterbodymap.component';
+import { ForgetpasswordComponent } from './_components/forgetpassword/forgetpassword.component';
+import { ConfirmpasswordComponent } from './_components/confirmpassword/confirmpassword.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,10 @@ import { MinicardComponent } from './_components/charts/minicard/minicard.compon
     ChartzoomviewerComponent,
     ZoomcardComponent,
     MinicardComponent,
+    WaterbodymapviewerComponent,
+    MaduraiwaterbodymapComponent,
+    ForgetpasswordComponent,
+    ConfirmpasswordComponent,
    
   ],
   imports: [
