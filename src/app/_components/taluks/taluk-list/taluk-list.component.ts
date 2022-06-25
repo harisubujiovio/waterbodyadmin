@@ -17,7 +17,7 @@ import { ResourceDataSource } from 'src/app/_shared/resource-datasource';
 })
 export class TalukListComponent implements OnInit {
   dataSource: ResourceDataSource<Resource>;
-  displayedColumns = ["name", "update", "delete"];
+  displayedColumns = ["code","name", "update", "delete"];
   dataLength: number
   private dialogConfig: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;

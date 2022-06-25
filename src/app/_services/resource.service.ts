@@ -33,6 +33,7 @@ export abstract class ResourceService<T> {
     let params = new HttpParams()
 			.set('offset', offset.toString())
 			.set('limit', pageSize.toString())
+      .set('search', filterValue.toString())
       .set('ordering', sortField.toString());
       console.log(this.APIUrl)
     console.log(`${this.APIUrl}?${params.toString()}`)

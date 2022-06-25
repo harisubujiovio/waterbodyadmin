@@ -31,6 +31,7 @@ export class PanchayatsCreateComponent implements OnInit {
   private dialogConfig: any;
   resourceForm = this.fb.group({
     name: [null, Validators.required],
+    code: [null, Validators.required],
     blockId: [null, Validators.required]
     
   });
@@ -92,6 +93,7 @@ export class PanchayatsCreateComponent implements OnInit {
 
   private createResource() {
     let newresource: Panchayat = {
+      code: this.resourceForm.get("code")?.value,
       name: this.resourceForm.get("name")?.value,
       blockId: this.resourceForm.get("blockId")?.value,
       createdBy: this.user.username
@@ -118,6 +120,7 @@ export class PanchayatsCreateComponent implements OnInit {
   }
   private updateResource() {
     let updatedresource: Panchayat = {
+      code: this.resourceForm.get("code")?.value,
       name: this.resourceForm.get("name")?.value,
       blockId: this.resourceForm.get("blockId")?.value,
       lastModifiedBy: this.user.username

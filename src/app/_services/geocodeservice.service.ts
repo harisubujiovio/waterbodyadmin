@@ -29,7 +29,7 @@ export class GeocodeserviceService {
     httpHeaders.append('Access-Control-Allow-Origin', '*');
     return this.httpClient.get<any>(featureInfoURL,{ headers:httpHeaders })
     .pipe(
-      map(response => console.log(response)),
+      // map(response => console.log(response)),
       catchError(handleError<any>('getFeatureInfo'))
     );
   }

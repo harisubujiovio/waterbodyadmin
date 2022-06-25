@@ -12,6 +12,7 @@ import { CardSummary } from 'src/app/_model/presentation/CardSummary';
 })
 export class DashboardComponent implements OnInit {
   miniCardData: CardSummary[];
+  selectedFeatureProperties : any;
   /** Based on the screen size, switch from standard to one column per row */
 cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
    map(({ matches }) => {
@@ -28,7 +29,7 @@ cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
        columns: 4,
        miniCard: { cols: 1, rows: 1 },
        chart: { cols: 2, rows: 2 },
-       table: { cols: 4, rows: 4 },
+       table: { cols: 2, rows: 3 },
      };
    })
  );
@@ -45,4 +46,5 @@ cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
       }
     });
   } 
+  onMapLocationClicked($event:any) { this.selectedFeatureProperties = $event; }
 }

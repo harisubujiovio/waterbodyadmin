@@ -30,7 +30,8 @@ import { WaterbodymapviewerComponent } from './_components/charts/waterbodymapvi
 import { MaduraiwaterbodymapComponent } from './_components/charts/maduraiwaterbodymap/maduraiwaterbodymap/maduraiwaterbodymap.component';
 import { ForgetpasswordComponent } from './_components/forgetpassword/forgetpassword.component';
 import { ConfirmpasswordComponent } from './_components/confirmpassword/confirmpassword.component';
-
+import { MapcardComponent } from './_components/card/mapcard/mapcard.component';
+import { MetadatacardComponent } from './_components/card/metadatacard/metadatacard/metadatacard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,8 @@ import { ConfirmpasswordComponent } from './_components/confirmpassword/confirmp
     MaduraiwaterbodymapComponent,
     ForgetpasswordComponent,
     ConfirmpasswordComponent,
+    MapcardComponent,
+    MetadatacardComponent,
    
   ],
   imports: [

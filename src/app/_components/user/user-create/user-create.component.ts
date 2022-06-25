@@ -66,7 +66,7 @@ export class UserCreateComponent implements OnInit {
       last_name: [null, Validators.required],
       email: [null, Validators.required],
       mobileNumber: [null, [Validators.required, Validators.minLength(10), Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-      phoneNumber: [null, [Validators.minLength(8)]],
+      phoneNumber: [null, [Validators.minLength(10)]],
       address: [null, Validators.required],
       role: [null, Validators.required]
     }, {
@@ -92,6 +92,7 @@ export class UserCreateComponent implements OnInit {
   }
 
   public onCancel = () => {
+    console.log(this.userForm);
     this.location.back();
   }
   onSubmit() {

@@ -6,7 +6,10 @@
     margin: 15px;
 }
 .mat-column-name {
-    flex: 0 0 45%;
+    flex: 0 0 30%;
+}
+.mat-column-distictname {
+    flex: 0 0 15%;
 }
 .mat-column-details {
     flex: 0 0 10%;

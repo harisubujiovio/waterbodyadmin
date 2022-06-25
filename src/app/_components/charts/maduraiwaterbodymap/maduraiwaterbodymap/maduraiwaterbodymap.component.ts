@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import Map from 'ol/Map';
 import View from 'ol/View';
 import OSM from 'ol/source/OSM';
@@ -10,6 +10,7 @@ import VectorLayer from 'ol/layer/Vector';
 import VectorSource from 'ol/source/Vector';
 import Stamen from 'ol/source/Stamen';
 import * as olProj from 'ol/proj';
+import { environment } from 'src/environments/environment';
 import Select from 'ol/interaction/Select';
 import { GeocodeserviceService } from 'src/app/_services/geocodeservice.service';
 import { fromLonLat } from 'ol/proj';
@@ -22,10 +23,12 @@ import { defaults } from 'ol/control';
 export class MaduraiwaterbodymapComponent implements OnInit {
   map:any
   selectSingleClick:any
+  @Output() maplocationclicked = new EventEmitter<any>();
   constructor(private geocodeService: GeocodeserviceService) { }
   mapView = new View({
-    center: fromLonLat([78.11621, 9.925615]),
-    zoom: 8
+    // center: fromLonLat([78.11621, 9.925615]),
+    center: [8698993.953294277, 1109317.25397479],
+    zoom: 10
   });
   maduraiTile = new TileLayer({
     source: new OSM()
@@ -33,7 +36,7 @@ export class MaduraiwaterbodymapComponent implements OnInit {
   
   maduraiWaterBodyTile =  new TileLayer({
     source: new TileWMS({
-      url: 'http://localhost:8080/geoserver/WaterBody/wms',
+      url: environment.geoServerURL,
       params: {'LAYERS': 'WaterBody:MaduraiWaterBodies', 'TILED': true},
       serverType: 'geoserver',
       // Countries have transparency, so do not fade tiles:
@@ -72,6 +75,7 @@ export class MaduraiwaterbodymapComponent implements OnInit {
 
      // display layer data on every pointer move
     this.map.on('pointermove', (event:any) => {
+       //  console.log(this.map.getView().getCenter())
         // console.log(this.maduraiTile.getData(event.pixel));
     });
   }
@@ -89,8 +93,14 @@ export class MaduraiwaterbodymapComponent implements OnInit {
 
    if(url)
    {
-    this.geocodeService.getFeatureInfo(url)
-    .subscribe(data => console.log(data));
+       this.geocodeService.getFeatureInfo(url)
+          .subscribe(data =>{
+            if(data != null && data.numberReturned > 0)
+            {
+               console.log(data.features[0]);
+               this.maplocationclicked.emit(data.features[0].properties)
+            }
+          });
    }
   }
 

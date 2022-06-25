@@ -22,10 +22,13 @@
   </mat-grid-tile>
     <!--Table-->
     <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows">
-      <app-card title="Madurai WaterBody Map">
-        <!-- <app-waterbodymapviewer></app-waterbodymapviewer> -->
-        <app-maduraiwaterbodymap></app-maduraiwaterbodymap>
-      </app-card>
+      <app-mapcard title="Madurai WaterBody Map">
+        <app-maduraiwaterbodymap (maplocationclicked)="onMapLocationClicked($event)"></app-maduraiwaterbodymap>
+      </app-mapcard>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols"
+      [rowspan]="( cardLayout | async )?.chart?.rows" *ngIf="selectedFeatureProperties">
+         <app-metadatacard [selectedFeatureProperties]="selectedFeatureProperties"></app-metadatacard>
     </mat-grid-tile>
   </mat-grid-list>
  

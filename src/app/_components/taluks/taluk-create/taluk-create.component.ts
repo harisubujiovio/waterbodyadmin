@@ -10,6 +10,7 @@ import { ErrorHandlerService } from 'src/app/_shared/error-handler.service';
 import { Resource } from 'src/app/_model/Resource';
 import { SuccessDialogComponent } from 'src/app/_shared/dialogs/success-dialog/success-dialog/success-dialog.component';
 import { TalukService } from 'src/app/_services/taluk.service';
+import { Taluk } from 'src/app/_model/Taluk';
 
 @Component({
   selector: 'app-taluk-create',
@@ -26,6 +27,7 @@ export class TalukCreateComponent implements OnInit {
   private dialogConfig: any;
   resourceForm = this.fb.group({
     name: [null, Validators.required],
+    code: [null, Validators.required],
     description: [null]
 
   });
@@ -80,7 +82,8 @@ export class TalukCreateComponent implements OnInit {
   }
 
   private createResource() {
-    let newresource: Resource = {
+    let newresource: Taluk = {
+      code: this.resourceForm.get("code")?.value,
       name: this.resourceForm.get("name")?.value,
       createdBy: this.user.username
     }
@@ -105,7 +108,8 @@ export class TalukCreateComponent implements OnInit {
       });
   }
   private updateResource() {
-    let updatedresource: Resource = {
+    let updatedresource: Taluk = {
+      code: this.resourceForm.get("code")?.value,
       name: this.resourceForm.get("name")?.value,
       lastModifiedBy: this.user.username
     }

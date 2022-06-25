@@ -17,6 +17,12 @@
         <mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="name"
             matSortDirection="asc" matSortDisableClear>
 
+            <ng-container matColumnDef="code">
+                <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Code">Code
+                </mat-header-cell>
+                <mat-cell *matCellDef="let resource">{{resource.code}}</mat-cell>
+            </ng-container>
+
             <ng-container matColumnDef="name">
                 <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Name">Name
                 </mat-header-cell>

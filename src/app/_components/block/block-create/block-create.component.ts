@@ -10,6 +10,7 @@ import { ErrorHandlerService } from 'src/app/_shared/error-handler.service';
 import { Resource } from 'src/app/_model/Resource';
 import { SuccessDialogComponent } from 'src/app/_shared/dialogs/success-dialog/success-dialog/success-dialog.component';
 import { BlockService } from 'src/app/_services/block.service';
+import { Block } from 'src/app/_model/Block';
 
 
 @Component({
@@ -27,6 +28,8 @@ export class BlockCreateComponent implements OnInit {
   private dialogConfig: any;
   resourceForm = this.fb.group({
     name: [null, Validators.required],
+    code: [null, Validators.required],
+    district: [null, Validators.required],
     description: [null]
 
   });
@@ -81,8 +84,10 @@ export class BlockCreateComponent implements OnInit {
   }
 
   private createResource() {
-    let newresource: Resource = {
+    let newresource: Block = {
+      code: this.resourceForm.get("code")?.value,
       name: this.resourceForm.get("name")?.value,
+      districtname: this.resourceForm.get("district")?.value,
       createdBy: this.user.username
     }
     this.blockService.create(newresource)
@@ -106,8 +111,10 @@ export class BlockCreateComponent implements OnInit {
       });
   }
   private updateResource() {
-    let updatedresource: Resource = {
+    let updatedresource: Block = {
+      code: this.resourceForm.get("code")?.value,
       name: this.resourceForm.get("name")?.value,
+      districtname: this.resourceForm.get("district")?.value,
       lastModifiedBy: this.user.username
     }
     this.blockService.update(this.id, updatedresource)

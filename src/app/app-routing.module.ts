@@ -65,6 +65,11 @@ const routes: Routes = [
     loadChildren: () => import('./_components/taluks/taluk.module').then(m => m.TalukModule)
   },
   {
+    path: 'district' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/district/district.module').then(m => m.DistrictModule)
+  },
+  {
     path: 'block' , component: AdminComponent,
     canActivate: [AuthGuard],
     loadChildren: () => import('./_components/block/block.module').then(m => m.BlockModule)

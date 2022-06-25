@@ -1,1 +1,8 @@
-.map { height: 100%; width: 100%;min-width: 100vh; min-height: 80vh;}
+.map { 
+    height: 100%; 
+    width: 100%;
+    min-width: 100vh; 
+    min-height: 80vh;
+    border: 2px;
+    border-color: blueviolet;
+}

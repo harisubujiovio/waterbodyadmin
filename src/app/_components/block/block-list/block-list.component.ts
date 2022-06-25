@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 import { merge, tap } from 'rxjs';
+import { Block } from 'src/app/_model/Block';
 import { Resource } from 'src/app/_model/Resource';
 import { BlockService } from 'src/app/_services/block.service';
 import { ConfirmationDialogComponent } from 'src/app/_shared/dialogs/confirmation-dialog/confirmation-dialog/confirmation-dialog.component';
@@ -17,8 +18,8 @@ import { ResourceDataSource } from 'src/app/_shared/resource-datasource';
 })
 export class BlockListComponent implements OnInit {
 
-  dataSource: ResourceDataSource<Resource>;
-  displayedColumns = ["name", "update", "delete"];
+  dataSource: ResourceDataSource<Block>;
+  displayedColumns = [ "code","name","districtname", "update", "delete"];
   dataLength: number
   private dialogConfig: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;

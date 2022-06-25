@@ -7,7 +7,17 @@
         <div class="row">
           <div class="col">
             <mat-form-field class="full-width">
-              <input matInput placeholder="Enter Taluk" formControlName="name">
+              <input matInput placeholder="Enter Taluk Code" formControlName="code">
+              <mat-error *ngIf="resourceForm.controls['code'].hasError('required')">
+                Taluk code is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Enter Taluk Name" formControlName="name">
               <mat-error *ngIf="resourceForm.controls['name'].hasError('required')">
                 Taluk name is <strong>required</strong>
               </mat-error>

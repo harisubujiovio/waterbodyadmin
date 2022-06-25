@@ -1,0 +1,23 @@
+<mat-card class="map-card">
+    <mat-card-header>
+        <mat-card-title>
+            WaterBody Name : {{selectedFeatureProperties.Tank_Name}}
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="dashboard-card-content">
+        <mat-grid-list cols="2" rowHeight="20">
+            <mat-grid-tile>Taluk</mat-grid-tile>
+            <mat-grid-tile>{{selectedFeatureProperties.Taluk}}</mat-grid-tile>
+            <mat-grid-tile>Block</mat-grid-tile>
+            <mat-grid-tile>{{selectedFeatureProperties.Block}}</mat-grid-tile>
+            <mat-grid-tile>Village</mat-grid-tile>
+            <mat-grid-tile>{{selectedFeatureProperties.Village}}</mat-grid-tile>
+            <mat-grid-tile>Capacity</mat-grid-tile>
+            <mat-grid-tile>{{selectedFeatureProperties.Cap_MCM}}</mat-grid-tile>
+          </mat-grid-list>
+        <!-- <p>Taluk: {{selectedFeatureProperties.Taluk}}</p>
+        <p>Block: {{selectedFeatureProperties.Block}}</p>
+        <p>Village: {{selectedFeatureProperties.Village}}</p>
+        <p>Capacity: {{selectedFeatureProperties.Cap_MCM}}</p> -->
+    </mat-card-content>
+  </mat-card>

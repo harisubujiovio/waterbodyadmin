@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://127.0.0.1:8000',
+  geoServerURL: 'http://13.233.253.99:8080/geoserver/WaterBody/wms'
 };
 
 /*

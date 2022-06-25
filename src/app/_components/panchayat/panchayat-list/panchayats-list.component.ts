@@ -18,7 +18,7 @@ import { PanchayatDataSource } from './panchayat-datasource';
 export class PanchayatsListComponent implements OnInit {
 
   dataSource: PanchayatDataSource;
-  displayedColumns = ["name","blockname", "update", "delete"];
+  displayedColumns = ["code","name","blockname", "update", "delete"];
   dataLength: number
   private dialogConfig: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;

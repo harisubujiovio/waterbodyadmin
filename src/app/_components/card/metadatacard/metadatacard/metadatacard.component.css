@@ -1,0 +1,19 @@
+.map-card {
+    min-width: 400px;
+    width: 100%;
+    padding:0%;
+  }
+  .mat-card-header{
+    background-color:cadetblue ;
+    padding:5px ;
+  }
+  .dashboard-card-content
+  {
+    padding-top: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+  }
+  mat-grid-tile {
+    background: lightblue;
+  }
