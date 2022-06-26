@@ -53,191 +53,200 @@
             <mat-list-item routerLink="/admin/dashboard">
                 <mat-icon>dashboard</mat-icon>Dashboard
             </mat-list-item>
-            <mat-list-item routerLink="/role/roles">
-                <mat-icon>assignment_ind</mat-icon>Role
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    Master Data
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                   <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                    <mat-expansion-panel-header>
+                        Location Master
+                    </mat-expansion-panel-header>
+                    <mat-nav-list dense>
+                        <a mat-list-item routerLink="/district/districts">
+                            <mat-icon>list_alt</mat-icon>District
+                        </a>
+                        <a mat-list-item routerLink="/block/blocks">
+                            <mat-icon>list_alt</mat-icon>Block
+                        </a>
+                        <a mat-list-item routerLink="/panchayat/panchayats">
+                            <mat-icon>list_alt</mat-icon>Panchayat
+                        </a>
+                        
+                    </mat-nav-list>
+                   </mat-expansion-panel>
+                   <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                    <mat-expansion-panel-header>
+                        Waterbody Master
+                    </mat-expansion-panel-header>
+                    <mat-nav-list dense>
+                        <a mat-list-item routerLink="/waterbodytype">
+                            <mat-icon>list_alt</mat-icon>Type
+                        </a>
+                        <a mat-list-item routerLink="/waterbodyownership">
+                            <mat-icon>list_alt</mat-icon>Ownership
+                        </a>
+                        <a mat-list-item routerLink="/waterbodysource">
+                            <mat-icon>list_alt</mat-icon>Source
+                        </a>
+                       
+                        <a mat-list-item routerLink="/waterbodyexoticspecies">
+                            <mat-icon>list_alt</mat-icon>Exotic Species
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodysluice">
+                            <mat-icon>list_alt</mat-icon>Sluice / Surplus Type
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodydepthsilllevel">
+                            <mat-icon>list_alt</mat-icon>Depth Sill Level
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodycondition">
+                            <mat-icon>list_alt</mat-icon>Conditions
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodysurplusweir">
+                            <mat-icon>list_alt</mat-icon>Surplus Weirs
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodymwlstone">
+                            <mat-icon>list_alt</mat-icon>MWL Stone
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyirrigationtankfunction">
+                            <mat-icon>list_alt</mat-icon>Tank Function
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyayacutnoncultivation">
+                            <mat-icon>list_alt</mat-icon>Ayacutnoncultivation
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodycropping">
+                            <mat-icon>list_alt</mat-icon>Cropping
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyinvestmentnature">
+                            <mat-icon>list_alt</mat-icon>Nature Investment
+                        </a>
+                        
+                        <a mat-list-item routerLink="/waterbodyfamilynature">
+                            <mat-icon>list_alt</mat-icon>Family Nature
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyfamilydistributionland">
+                            <mat-icon>list_alt</mat-icon>Distribution Land
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodytankuniqueness">
+                            <mat-icon>list_alt</mat-icon>Tank Uniqueness
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyboundarydroppoint">
+                            <mat-icon>list_alt</mat-icon>Boundary DropPoint
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodytempletanktype">
+                            <mat-icon>list_alt</mat-icon>Temple TankType
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyinlettype">
+                            <mat-icon>list_alt</mat-icon>Inlet Type
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyslittrap">
+                            <mat-icon>list_alt</mat-icon>Slit Trap
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyoutlettype">
+                            <mat-icon>list_alt</mat-icon>Outlet Type
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyghatcondition">
+                            <mat-icon>list_alt</mat-icon>Ghat Condition
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyfencecondition">
+                            <mat-icon>list_alt</mat-icon>Fence Condition
+                        </a>
+                        
+                        <a mat-list-item routerLink="/waterbodyfencetype">
+                            <mat-icon>list_alt</mat-icon>Fence Type
+                        </a>
+    
+                        <a mat-list-item routerLink="/waterbodyooranifunction">
+                            <mat-icon>list_alt</mat-icon>Oorani Function
+                        </a>
+                        <a mat-list-item routerLink="/waterbodycrosssection">
+                            <mat-icon>list_alt</mat-icon>Cross Section Type
+                        </a>
+                        <a mat-list-item routerLink="/waterbodystreamissue">
+                            <mat-icon>list_alt</mat-icon>Stream Issue
+                        </a>
+                        <a mat-list-item routerLink="/waterbodyshutter">
+                            <mat-icon>list_alt</mat-icon>Shutter
+                        </a>
+                        <a mat-list-item routerLink="/waterbodyshuttercondition">
+                            <mat-icon>list_alt</mat-icon>Shutter Condition
+                        </a>
+                        <a mat-list-item routerLink="/waterbodybund">
+                            <mat-icon>list_alt</mat-icon>Bund Functionality
+                        </a>
+                        <a mat-list-item routerLink="/waterbodytankissue">
+                            <mat-icon>list_alt</mat-icon>Tank Issue
+                        </a>
+                        <a mat-list-item routerLink="/waterbodystonepitching">
+                            <mat-icon>list_alt</mat-icon>Stone Pitching
+                        </a>
+                        <a mat-list-item routerLink="/waterbodystonepitchingcondition">
+                            <mat-icon>list_alt</mat-icon>Pitching Condition
+                        </a>
+                    </mat-nav-list>
+                </mat-expansion-panel>
+    
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    User Management
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                    <a mat-list-item routerLink="/role/roles">
+                        <mat-icon>assignment_ind</mat-icon>Role
+                    </a>
+                    <a mat-list-item routerLink="/user/users">
+                        <mat-icon>person</mat-icon>User
+                    </a>
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    Waterbody Details
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                    <a mat-list-item routerLink="/tank/tanks">
+                        <mat-icon>panorama_vertical</mat-icon>Govt WaterBodies
+                    </a>
+                    <a mat-list-item routerLink="/tank/tanks">
+                        <mat-icon>panorama_vertical</mat-icon>Reviews
+                    </a>
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                <mat-expansion-panel-header>
+                    Reports
+                </mat-expansion-panel-header>
+                <mat-nav-list dense>
+                  
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+            <mat-list-item routerLink="/admin/dashboard">
+                <mat-icon>settings</mat-icon>Setting
             </mat-list-item>
-        
-            <mat-list-item routerLink="/user/users">
-                <mat-icon><span class="material-icons-outlined">
-                    person
-                    </span></mat-icon>User
-            </mat-list-item>
-            <mat-list-item routerLink="/tank/tanks">
-                <mat-icon>panorama_vertical</mat-icon>
-                Tanks
-            </mat-list-item>
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-                <mat-expansion-panel-header>
-                    General Entities
-                </mat-expansion-panel-header>
-                <mat-nav-list dense>
-                    <a mat-list-item routerLink="/district/districts">
-                        <mat-icon>list_alt</mat-icon>District
-                    </a>
-                    <a mat-list-item routerLink="/block/blocks">
-                        <mat-icon>list_alt</mat-icon>Block
-                    </a>
-                    <a mat-list-item routerLink="/panchayat/panchayats">
-                        <mat-icon>list_alt</mat-icon>Panchayat
-                    </a>
-                    
-                </mat-nav-list>
-            </mat-expansion-panel>
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-                <mat-expansion-panel-header>
-                    WaterBody Entites
-                </mat-expansion-panel-header>
-                <mat-nav-list dense>
-                    <a mat-list-item routerLink="/waterbodytype">
-                        <mat-icon>list_alt</mat-icon>Type
-                    </a>
-                    <a mat-list-item routerLink="/waterbodyownership">
-                        <mat-icon>list_alt</mat-icon>Ownership
-                    </a>
-                    <a mat-list-item routerLink="/waterbodysource">
-                        <mat-icon>list_alt</mat-icon>Source
-                    </a>
-                   
-                    <a mat-list-item routerLink="/waterbodyexoticspecies">
-                        <mat-icon>list_alt</mat-icon>Exotic Species
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodysluice">
-                        <mat-icon>list_alt</mat-icon>Sluice / Surplus Type
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodydepthsilllevel">
-                        <mat-icon>list_alt</mat-icon>Depth Sill Level
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodycondition">
-                        <mat-icon>list_alt</mat-icon>Conditions
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodysurplusweir">
-                        <mat-icon>list_alt</mat-icon>Surplus Weirs
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodymwlstone">
-                        <mat-icon>list_alt</mat-icon>MWL Stone
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyirrigationtankfunction">
-                        <mat-icon>list_alt</mat-icon>Tank Function
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyayacutnoncultivation">
-                        <mat-icon>list_alt</mat-icon>Ayacutnoncultivation
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodycropping">
-                        <mat-icon>list_alt</mat-icon>Cropping
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyinvestmentnature">
-                        <mat-icon>list_alt</mat-icon>Nature Investment
-                    </a>
-                    
-                    <a mat-list-item routerLink="/waterbodyfamilynature">
-                        <mat-icon>list_alt</mat-icon>Family Nature
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyfamilydistributionland">
-                        <mat-icon>list_alt</mat-icon>Distribution Land
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodytankuniqueness">
-                        <mat-icon>list_alt</mat-icon>Tank Uniqueness
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyboundarydroppoint">
-                        <mat-icon>list_alt</mat-icon>Boundary DropPoint
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodytempletanktype">
-                        <mat-icon>list_alt</mat-icon>Temple TankType
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyinlettype">
-                        <mat-icon>list_alt</mat-icon>Inlet Type
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyslittrap">
-                        <mat-icon>list_alt</mat-icon>Slit Trap
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyoutlettype">
-                        <mat-icon>list_alt</mat-icon>Outlet Type
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyghatcondition">
-                        <mat-icon>list_alt</mat-icon>Ghat Condition
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyfencecondition">
-                        <mat-icon>list_alt</mat-icon>Fence Condition
-                    </a>
-                    
-                    <a mat-list-item routerLink="/waterbodyfencetype">
-                        <mat-icon>list_alt</mat-icon>Fence Type
-                    </a>
-
-                    <a mat-list-item routerLink="/waterbodyooranifunction">
-                        <mat-icon>list_alt</mat-icon>Oorani Function
-                    </a>
-
-                </mat-nav-list>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-                <mat-expansion-panel-header>
-                    Stream
-                </mat-expansion-panel-header>
-                <mat-nav-list dense>
-                    <a mat-list-item routerLink="/waterbodycrosssection">
-                        <mat-icon>list_alt</mat-icon>Cross Section Type
-                    </a>
-                    <a mat-list-item routerLink="/waterbodystreamissue">
-                        <mat-icon>list_alt</mat-icon>Stream Issue
-                    </a>
-                    
-                </mat-nav-list>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-                <mat-expansion-panel-header>
-                    Shutter
-                </mat-expansion-panel-header>
-                <mat-nav-list dense>
-                    <a mat-list-item routerLink="/waterbodyshutter">
-                        <mat-icon>list_alt</mat-icon>Shutter
-                    </a>
-                    <a mat-list-item routerLink="/waterbodyshuttercondition">
-                        <mat-icon>list_alt</mat-icon>Shutter Condition
-                    </a>
-                    
-                </mat-nav-list>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-                <mat-expansion-panel-header>
-                    Bund
-                </mat-expansion-panel-header>
-                <mat-nav-list dense>
-                    <a mat-list-item routerLink="/waterbodybund">
-                        <mat-icon>list_alt</mat-icon>Bund Functionality
-                    </a>
-                    <a mat-list-item routerLink="/waterbodytankissue">
-                        <mat-icon>list_alt</mat-icon>Tank Issue
-                    </a>
-                    <a mat-list-item routerLink="/waterbodystonepitching">
-                        <mat-icon>list_alt</mat-icon>Stone Pitching
-                    </a>
-                    <a mat-list-item routerLink="/waterbodystonepitchingcondition">
-                        <mat-icon>list_alt</mat-icon>Pitching Condition
-                    </a>
-                </mat-nav-list>
-            </mat-expansion-panel>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content [ngStyle]="{ 'margin-left.px' : contentMargin }">

@@ -1,11 +1,11 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
+// geoServerURL: 'http://13.233.253.99:8080/geoserver/WaterBody/wms'
 export const environment = {
   production: false,
   apiUrl: 'http://127.0.0.1:8000',
-  geoServerURL: 'http://13.233.253.99:8080/geoserver/WaterBody/wms'
+  geoServerURL: 'http://127.0.0.1:8080/geoserver/WaterBody/wms'
 };
 
 /*
