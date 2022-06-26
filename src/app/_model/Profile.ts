@@ -1,7 +1,7 @@
 export class Profile {
     user_id?: number;
     mobileNumber: string;
-    phoneNumber: string;
+    pincode: string;
     address: string;
     createdBy: string;
     lastModifiedBy?: string;

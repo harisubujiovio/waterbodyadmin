@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -57,6 +57,10 @@ export class UserService {
   }
   deleteRole(id: string,userId: number) {
     return this.http.delete<User>(`${environment.apiUrl}/waterBodyAdmin/userprofile/${id}/user/${userId}/`);
+  }
+
+  getAddressByPinCode(pincode: number) : Observable<any> {
+    return this.http.get<any>(`${environment.apiUrl}/waterBodyAdmin/address/?pincode=${pincode}`);
   }
  
 }

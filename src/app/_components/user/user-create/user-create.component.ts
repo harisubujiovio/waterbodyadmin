@@ -63,10 +63,10 @@ export class UserCreateComponent implements OnInit {
       password: ['', [Validators.minLength(8), this.isAddMode ? Validators.required : Validators.nullValidator]],
       confirmPassword: ['', this.isAddMode ? Validators.required : Validators.nullValidator],
       first_name: [null, Validators.required],
-      last_name: [null, Validators.required],
-      email: [null, Validators.required],
+      last_name: [null],
+      email: [null],
       mobileNumber: [null, [Validators.required, Validators.minLength(10), Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
-      phoneNumber: [null, [Validators.minLength(10)]],
+      pincode: [null, [Validators.maxLength(6)]],
       address: [null, Validators.required],
       role: [null, Validators.required]
     }, {
@@ -84,6 +84,7 @@ export class UserCreateComponent implements OnInit {
       this.userService.getById(this.id)
         .pipe(first())
         .subscribe((x: UserProfile) => {
+          console.log(x);
           this.userForm.patchValue(x)
           this.user_id = x.user_id
         });
@@ -94,6 +95,26 @@ export class UserCreateComponent implements OnInit {
   public onCancel = () => {
     console.log(this.userForm);
     this.location.back();
+  }
+  public onRetriveAddress = () => {
+    if(this.userForm.get("pincode")?.value)
+    {
+      this.userService.getAddressByPinCode(this.userForm.get("pincode")?.value)
+      .pipe(first())
+        .subscribe((addressResponse: any) => {
+          if(addressResponse == 'No address found for given pincode')
+           this.userForm.patchValue({
+               address: ''
+            });
+          else
+          {
+             this.userForm.patchValue({
+              address: addressResponse.Name + ',' + addressResponse.Block + ',' + addressResponse.District + ',' + addressResponse.Region + ',' + addressResponse.State
+            });
+          }
+            
+        });
+    }
   }
   onSubmit() {
     this.submitted = true;
@@ -126,7 +147,7 @@ export class UserCreateComponent implements OnInit {
           console.log(response.id);
           let newuserProfile: Profile = {
             mobileNumber: this.userForm.get("mobileNumber")?.value,
-            phoneNumber: this.userForm.get("phoneNumber")?.value,
+            pincode: this.userForm.get("pincode")?.value,
             address: this.userForm.get("address")?.value,
             createdBy: this.user.username,
             user_id: response.id,
@@ -164,11 +185,12 @@ export class UserCreateComponent implements OnInit {
       first_name: this.userForm.get("first_name")?.value,
       last_name: this.userForm.get("last_name")?.value,
       mobileNumber: this.userForm.get("mobileNumber")?.value,
-      phoneNumber: this.userForm.get("phoneNumber")?.value,
+      pincode: this.userForm.get("pincode")?.value,
       address: this.userForm.get("address")?.value,
       user_id: this.user_id,
       role: this.userForm.get("role")?.value
     }
+    console.log(updateduser);
     this.userService.updateUser(this.id, this.user_id, updateduser)
       .pipe(first())
       .subscribe({

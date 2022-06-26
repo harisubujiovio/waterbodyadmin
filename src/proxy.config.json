@@ -1,0 +1,14 @@
+{
+    "/api/*": {
+        "target": "https://api.postalpincode.in",
+        "secure": false,
+        "changeOrigin" : true,
+        "logLevel": "debug"
+    },
+    "/pincode/*": {
+        "target": "https://api.postalpincode.in",
+        "secure": false,
+        "changeOrigin" : true,
+        "logLevel": "debug"
+    }
+}

@@ -4,7 +4,7 @@ export interface UserProfile {
     first_name: string;
     last_name: string;
     mobileNumber: string;
-    phoneNumber: string;
+    pincode: string;
     address: string;
     user_id: number;
     role: string;

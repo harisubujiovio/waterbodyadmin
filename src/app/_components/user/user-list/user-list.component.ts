@@ -16,7 +16,7 @@ import { UserDataSource } from './user-datasource';
 })
 export class UserListComponent implements OnInit {
   dataSource: UserDataSource;
-  displayedColumns = ["first_name", "last_name", "email","mobileNumber","phoneNumber","address", "update", "delete"];
+  displayedColumns = ["first_name", "last_name", "email","mobileNumber","address", "update", "delete"];
   dataLength: number
   private dialogConfig: any;
   @ViewChild(MatPaginator) paginator: MatPaginator;

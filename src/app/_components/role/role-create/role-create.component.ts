@@ -25,7 +25,7 @@ export class RoleCreateComponent implements OnInit {
   private dialogConfig: any;
   roleForm = this.fb.group({
     name: [null, Validators.required],
-    description: [null]
+    description: [null, Validators.required]
 
   });
   constructor(private fb: FormBuilder,

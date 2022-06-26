@@ -17,7 +17,7 @@
             <div class="row" *ngIf="isAddMode">
                 <div class="col">
                     <mat-form-field class="full-width">
-                        <input matInput placeholder="Enter Password" formControlName="password">
+                        <input type="password" matInput placeholder="Enter Password" formControlName="password">
                         <mat-error *ngIf="userForm.controls['password'].hasError('required')">
                             Password is <strong>required</strong>
                         </mat-error>
@@ -27,7 +27,7 @@
             <div class="row" *ngIf="isAddMode">
                 <div class="col">
                     <mat-form-field class="full-width">
-                        <input matInput placeholder="Enter Confirm Password" formControlName="confirmPassword">
+                        <input type="password" matInput placeholder="Enter Confirm Password" formControlName="confirmPassword">
                         <mat-error *ngIf="userForm.controls['confirmPassword'].hasError('required')">
                             Confirm Password is <strong>required</strong>
                         </mat-error>
@@ -80,7 +80,18 @@
             <div class="row">
                 <div class="col">
                     <mat-form-field class="full-width">
-                        <input matInput placeholder="Enter Phone Number" formControlName="phoneNumber" maxlength="10">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input matInput placeholder="Enter Pin Code" formControlName="pincode" maxlength="6">
+                                </td>
+                                <td>
+                                    <button type="button" mat-raised-button color="primary" (click)="onRetriveAddress()">Retrieve Address</button>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
                     </mat-form-field>
                 </div>
             </div>
