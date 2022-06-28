@@ -70,17 +70,12 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "proxyConfig": "src/proxy.config.json"
-          },
           "configurations": {
             "production": {
-              "browserTarget": "waterbodyadmin:build:production",
-              "proxyConfig": "src/proxy.config.json"
+              "browserTarget": "waterbodyadmin:build:production"
             },
             "development": {
-              "browserTarget": "waterbodyadmin:build:development",
-              "proxyConfig": "src/proxy.config.json"
+              "browserTarget": "waterbodyadmin:build:development"
             }
           },
           "defaultConfiguration": "development"
