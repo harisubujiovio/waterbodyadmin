@@ -25,7 +25,7 @@ RUN npm run build
 
 # BASE IMAGE with an alias #
 FROM nginx as runtime
-
+COPY nginx.conf /etc/nginx/nginx.conf
 # Copy contents from the other container with alias "build" #
 # onto the specified path in the current container#
 COPY --from=build /usr/src/app/dist/waterbodyadmin /usr/share/nginx/html

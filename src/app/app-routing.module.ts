@@ -244,6 +244,31 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./_components/waterbodyooranifunction/waterbodyooranifunction.module').then(m => m.WaterBodyOoraniFunctionModule)
   },
+  {
+    path: 'waterbodytanktype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyTankType/waterbodytanktype.module').then(m => m.WaterBodyTankTypeModule)
+  },
+  {
+    path: 'waterbodycatchmenttype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodycatchmenttype/waterbodycatchmenttype.module').then(m => m.WaterBodyCatchmentTypeModule)
+  },
+  {
+    path: 'waterbodyavailability' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyavailability/waterbodyavailability.module').then(m => m.WaterbodyAvailabilityModule)
+  },
+  {
+    path: 'waterbodyspreadissue' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyspreadissue/waterbodyspreadissue.module').then(m => m.WaterBodySpreadIssueModule)
+  },
+  {
+    path: 'waterbodybundissue' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodybundissue/waterbodybundissue.module').then(m => m.WaterBodyBundIssueModule)
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
