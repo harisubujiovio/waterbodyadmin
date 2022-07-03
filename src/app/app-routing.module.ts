@@ -269,6 +269,17 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./_components/waterbodybundissue/waterbodybundissue.module').then(m => m.WaterBodyBundIssueModule)
   },
+  {
+    path: 'waterbodyfieldchanneltype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyfieldchanneltype/waterbodyfieldchanneltype.module').then(m => m.WaterBodyFieldChannelTypeModule)
+  },
+  {
+    path: 'waterbodybarreltype' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodybarreltype/waterbodybarreltype.module').then(m => m.WaterbodyBarrelTypeModule)
+  },
+  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
