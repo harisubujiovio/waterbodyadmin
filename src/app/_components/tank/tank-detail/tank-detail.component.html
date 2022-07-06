@@ -8,58 +8,38 @@
             <div fxLayout="column wrap" fxLayoutGap="15px">
                 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
                     <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Unique_id:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Unique_id}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Unique_id:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Unique_id}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>FID:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.FID}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>FID:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.FID}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>CLUSTER:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.CLUSTER}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>CLUSTER:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.CLUSTER}}</div>
                         </div>
                     </ng-container>
 
                 </div>
                 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
                     <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>TANK_NUM:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.TANK_NUM}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>TANK_NUM:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.TANK_NUM}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Tank_Name:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Tank_Name}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Tank_Name:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Tank_Name}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Latitude:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Latitude}}</div>
-                        </div>
-                    </ng-container>
-
-                </div>
-
-                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-                    <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Longitude:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Longitude}}</div>
-                        </div>
-
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Village:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Village}}</div>
-                        </div>
-
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Block:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Block}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Latitude:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Latitude}}</div>
                         </div>
                     </ng-container>
 
@@ -67,39 +47,19 @@
 
                 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
                     <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Taluk:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Taluk}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Longitude:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Longitude}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>District:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.District}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Village:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Village}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Subbasin:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Subbasin}}</div>
-                        </div>
-                    </ng-container>
-
-                </div>
-
-                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-                    <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Basin:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Basin}}</div>
-                        </div>
-
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Section:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Section}}</div>
-                        </div>
-
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Sub_Dn:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Sub_Dn}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Block:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Block}}</div>
                         </div>
                     </ng-container>
 
@@ -107,39 +67,19 @@
 
                 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
                     <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Division:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Division}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Taluk:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Taluk}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Circle:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Circle}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>District:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.District}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Region:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Region}}</div>
-                        </div>
-                    </ng-container>
-
-                </div>
-
-                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-                    <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Tank_Type:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Tank_Type}}</div>
-                        </div>
-
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Cap_MCM:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Cap_MCM}}</div>
-                        </div>
-
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>FTL_m:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.FTL_m}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Subbasin:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Subbasin}}</div>
                         </div>
                     </ng-container>
 
@@ -147,39 +87,19 @@
 
                 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
                     <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>MWL_m:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.MWL_m}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Basin:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Basin}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>TBL_m:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.TBL_m}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Section:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Section}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>FTL_m:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Sto_Dep_m}}</div>
-                        </div>
-                    </ng-container>
-
-                </div>
-
-                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-                    <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Ayacut_ha:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Ayacut_ha}}</div>
-                        </div>
-
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Catch_sqkm:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Catch_sqkm}}</div>
-                        </div>
-
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Wat_Spr_ha:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Wat_Spr_ha}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Sub_Dn:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Sub_Dn}}</div>
                         </div>
                     </ng-container>
 
@@ -187,19 +107,19 @@
 
                 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
                     <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>No_of_Weir:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.No_of_Weir}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Division:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Division}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Weir_Len_m:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Weir_Len_m}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Circle:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Circle}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>No_Sluice:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.No_Sluice}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Region:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Region}}</div>
                         </div>
                     </ng-container>
 
@@ -207,23 +127,104 @@
 
                 <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
                     <ng-container>
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Low_Sil_m:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Low_Sil_m}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Tank_Type:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Tank_Type}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Bund_Len_m:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Bund_Len_m}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Cap_MCM:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Cap_MCM}}</div>
                         </div>
 
-                        <div fxFlex="0 1 calc(33.3% - 32px)">
-                            <div fxFlex="25%"><strong>Dis_cusec:</strong></div>
-                            <div fxFlex="75%">{{tankMetaData.Dis_cusec}}</div>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>FTL_m:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.FTL_m}}</div>
                         </div>
                     </ng-container>
 
                 </div>
+
+                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+                    <ng-container>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>MWL_m:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.MWL_m}}</div>
+                        </div>
+
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>TBL_m:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.TBL_m}}</div>
+                        </div>
+
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>FTL_m:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Sto_Dep_m}}</div>
+                        </div>
+                    </ng-container>
+
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+                    <ng-container>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Ayacut_ha:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Ayacut_ha}}</div>
+                        </div>
+
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Catch_sqkm:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Catch_sqkm}}</div>
+                        </div>
+
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Wat_Spr_ha:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Wat_Spr_ha}}</div>
+                        </div>
+                    </ng-container>
+
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+                    <ng-container>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>No_of_Weir:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.No_of_Weir}}</div>
+                        </div>
+
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Weir_Len_m:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Weir_Len_m}}</div>
+                        </div>
+
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>No_Sluice:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.No_Sluice}}</div>
+                        </div>
+                    </ng-container>
+
+                </div>
+
+                <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+                    <ng-container>
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Low_Sil_m:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Low_Sil_m}}</div>
+                        </div>
+
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Bund_Len_m:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Bund_Len_m}}</div>
+                        </div>
+
+                        <div fxFlex="0 1 calc(33.3% - 32px)" fxLayout.lt-md="column">
+                            <div fxFlex="30%" fxFlex.lt-md="100"><strong>Dis_cusec:</strong></div>
+                            <div fxFlex="70%" fxFlex.lt-md="100">{{tankMetaData.Dis_cusec}}</div>
+                        </div>
+                    </ng-container>
+
+                </div>
+               
 
             </div>
 

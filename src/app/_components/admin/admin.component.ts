@@ -14,7 +14,7 @@ export class AdminComponent implements OnInit {
   contentMargin = 240;
   currentYear = new Date().getFullYear().toString();
   user: Session;
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Medium)
   .pipe(
     map(result => result.matches),
     shareReplay()

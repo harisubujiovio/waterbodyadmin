@@ -35,9 +35,11 @@ export class TankService {
   }
 
 
-  createTank(file: any) : Observable<Tank> {
+  createTank(file: any,filename: string,createdBy: string) : Observable<Tank> {
     const formData = new FormData();
     formData.append("image",file);
+    formData.append("filename", filename);
+    formData.append("createdBy", createdBy);
     return this.http.post<Tank>(`${environment.apiUrl}/waterBodyAdmin/tankImage/`, formData);
   }
 

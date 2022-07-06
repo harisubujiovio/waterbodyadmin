@@ -9,6 +9,8 @@ import { TankService } from 'src/app/_services/tank.service';
 import { Tank } from 'src/app/_model/tank';
 import { SuccessDialogComponent } from 'src/app/_shared/dialogs/success-dialog/success-dialog/success-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { Session } from 'src/app/_model/Session';
+import { AuthenticationService } from 'src/app/_services/authentication.service';
 @Component({
   selector: 'app-tank-create',
   templateUrl: './tank-create.component.html',
@@ -17,10 +19,15 @@ import { MatDialog } from '@angular/material/dialog';
 export class TankCreateComponent implements OnInit {
   uploadForm: FormGroup;
   loading = false;
+  user: Session;
   private dialogConfig: any;
-  constructor(private fb: FormBuilder, private http: HttpClient, private location: Location,
-    private tankService: TankService, private dialog: MatDialog,private errorService: ErrorHandlerService) {
-
+  constructor(private fb: FormBuilder, 
+    private http: HttpClient, 
+    private location: Location,
+    private authService: AuthenticationService,
+    private tankService: TankService, private dialog: MatDialog,
+    private errorService: ErrorHandlerService) {
+      this.user = this.authService.userValue;
   }
   ngOnInit() {
     this.uploadForm = this.fb.group({
@@ -47,8 +54,10 @@ export class TankCreateComponent implements OnInit {
   onSubmit() {
     this.loading = true;
     const control = this.uploadForm.get('profile');
+    const filenameControl = this.uploadForm.get('fileName');
+    console.log(this.user.username)
     if (control)
-      this.tankService.createTank(control.value).subscribe(
+      this.tankService.createTank(control.value, filenameControl?.value,this.user.username).subscribe(
         (res: Tank) => {
           console.log(res.id)
           this.tankService.processTankMetaData(res.id)

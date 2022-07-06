@@ -33,7 +33,7 @@
         Loading stuff...
     </ng-template>
 </mat-toolbar>
-<mat-sidenav-container style="height: calc(91% - 64px);" id="sidenavContainer">
+<mat-sidenav-container id="sidenavContainer">
     <mat-sidenav #sidenav id="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'" opened [class.menu-open]="isMenuOpen"
         [class.menu-close]="!isMenuOpen">
