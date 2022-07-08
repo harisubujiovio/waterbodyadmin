@@ -279,6 +279,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./_components/waterbodybarreltype/waterbodybarreltype.module').then(m => m.WaterbodyBarrelTypeModule)
   },
+  {
+    path: 'waterbodyPermission' , component: AdminComponent,
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./_components/waterbodyPermission/waterbodyPermission.module').then(m => m.WaterBodyPermissionModule)
+  },
   
 ];
 @NgModule({

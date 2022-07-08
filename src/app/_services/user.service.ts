@@ -53,6 +53,7 @@ export class UserService {
     return this.http.post<Profile>(`${environment.apiUrl}/waterBodyAdmin/userprofile/`, profile);
   }
   updateUser(id: string,userId: number, userProfile: UserProfile) : Observable<UserProfile> {
+    console.log(userProfile)
     return this.http.patch<UserProfile>(`${environment.apiUrl}/waterBodyAdmin/userprofile/${id}/updateuser/${userId}/`, userProfile);
   }
   deleteRole(id: string,userId: number) {

@@ -1,0 +1,55 @@
+<div class="container">
+    Permissions
+    <form [formGroup]="permissionForm" novalidate>
+        <div class="flex-container" fxLayout="row" fxLayoutAlign="space-between none">
+            <mat-form-field class="full-width">
+                <mat-label>Select Role</mat-label>
+                <mat-select formControlName="role" (selectionChange)="filterByRole($event.value)">
+                    <mat-option *ngFor="
+                    let role of roles" [value]="role.id">
+                        {{ role.name }}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="permissionForm.controls['role'].hasError('required')">
+                    You must make a selection
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <div class="spinner-container" *ngIf="dataSource.loading$ | async">
+                <mat-spinner style="margin:0 auto;" mode="indeterminate" diameter="40"></mat-spinner>
+            </div>
+            <mat-table class="mat-elevation-z8" [dataSource]="dataSource" matSort matSortActive="name"
+                matSortDirection="asc" matSortDisableClear>
+    
+                <ng-container matColumnDef="resourcename">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Name">Resource
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let resource">{{resource.resourcename}}</mat-cell>
+                </ng-container>
+    
+                <ng-container matColumnDef="permissionname">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Name">Permission
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let resource">{{resource.permissionname}}</mat-cell>
+                </ng-container>
+    
+                <ng-container matColumnDef="Assigned">
+                    <mat-header-cell *matHeaderCellDef>Assigned
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let resource">
+                        <mat-checkbox [checked]="resource.status" (change)="permissionChanged($event,resource)"></mat-checkbox>
+                    </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    
+                <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    
+            </mat-table>
+    
+        </div>
+    </form>
+    
+</div>
+

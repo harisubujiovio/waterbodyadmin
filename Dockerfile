@@ -16,7 +16,7 @@ FROM node:16.10.0-alpine3.11 as build
 WORKDIR /usr/src/app
 
 # Install Angular CLI to run Build #
-RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli@13.1.2
 
 COPY package.json .
 RUN npm install

@@ -32,6 +32,7 @@ import { ForgetpasswordComponent } from './_components/forgetpassword/forgetpass
 import { ConfirmpasswordComponent } from './_components/confirmpassword/confirmpassword.component';
 import { MapcardComponent } from './_components/card/mapcard/mapcard.component';
 import { MetadatacardComponent } from './_components/card/metadatacard/metadatacard/metadatacard.component';
+import { HydrologicalComponent } from './_components/hydrological/hydrological/hydrological.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { MetadatacardComponent } from './_components/card/metadatacard/metadatac
     ConfirmpasswordComponent,
     MapcardComponent,
     MetadatacardComponent,
+    HydrologicalComponent,
    
   ],
   imports: [

@@ -182,6 +182,7 @@ export class UserCreateComponent implements OnInit {
   }
   private updateUser() {
     let updateduser: UserProfile = {
+      username: this.userForm.get("username")?.value,
       first_name: this.userForm.get("first_name")?.value,
       last_name: this.userForm.get("last_name")?.value,
       mobileNumber: this.userForm.get("mobileNumber")?.value,
