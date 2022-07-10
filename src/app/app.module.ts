@@ -33,6 +33,7 @@ import { ConfirmpasswordComponent } from './_components/confirmpassword/confirmp
 import { MapcardComponent } from './_components/card/mapcard/mapcard.component';
 import { MetadatacardComponent } from './_components/card/metadatacard/metadatacard/metadatacard.component';
 import { HydrologicalComponent } from './_components/hydrological/hydrological/hydrological.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,7 @@ import { HydrologicalComponent } from './_components/hydrological/hydrological/h
     MapcardComponent,
     MetadatacardComponent,
     HydrologicalComponent,
-   
+
   ],
   imports: [
     BrowserModule,

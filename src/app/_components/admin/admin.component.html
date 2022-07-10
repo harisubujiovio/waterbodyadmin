@@ -53,12 +53,12 @@
             <mat-list-item routerLink="/admin/dashboard">
                 <mat-icon>dashboard</mat-icon>Dashboard
             </mat-list-item>
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense *appIsGranted="['MasterDataManagement', 'List']">
                 <mat-expansion-panel-header>
                     Master Data
                 </mat-expansion-panel-header>
                 <mat-nav-list dense>
-                   <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                   <mat-expansion-panel [class.mat-elevation-z0]="true" dense *appIsGranted="['LocationMaster', 'List']">
                     <mat-expansion-panel-header>
                         Location Master
                     </mat-expansion-panel-header>
@@ -75,7 +75,7 @@
                         
                     </mat-nav-list>
                    </mat-expansion-panel>
-                   <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+                   <mat-expansion-panel [class.mat-elevation-z0]="true" dense *appIsGranted="['WaterBodyMaster', 'List']">
                     <mat-expansion-panel-header>
                         Waterbody Master
                     </mat-expansion-panel-header>
@@ -209,23 +209,24 @@
     
                 </mat-nav-list>
             </mat-expansion-panel>
-
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
-                <mat-expansion-panel-header>
-                    User Management
-                </mat-expansion-panel-header>
-                <mat-nav-list dense>
-                    <a mat-list-item routerLink="/role/roles">
-                        <mat-icon>assignment_ind</mat-icon>Role
-                    </a>
-                    <a mat-list-item routerLink="/user/users">
-                        <mat-icon>person</mat-icon>User
-                    </a>
-                </mat-nav-list>
-            </mat-expansion-panel>
-
             
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense *appIsGranted="['UserManagement', 'List']">
+                        <mat-expansion-panel-header>
+                            User Management
+                        </mat-expansion-panel-header>
+                        <mat-nav-list dense>
+                                <a mat-list-item routerLink="/role/roles" *appIsGranted="['Role', 'List']">
+                                    <mat-icon>assignment_ind</mat-icon>Role
+                                </a>
+                                <a mat-list-item routerLink="/user/users" *appIsGranted="['User', 'List']">
+                                    <mat-icon>person</mat-icon>User
+                                </a>
+                        </mat-nav-list>
+                   
+            </mat-expansion-panel>
+            
+
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense *appIsGranted="['Permission', 'List']">
                 <mat-expansion-panel-header>
                     Permission Management
                 </mat-expansion-panel-header>
@@ -250,7 +251,7 @@
                 </mat-nav-list>
             </mat-expansion-panel>
 
-            <mat-expansion-panel [class.mat-elevation-z0]="true" dense>
+            <mat-expansion-panel [class.mat-elevation-z0]="true" dense *appIsGranted="['Reports', 'List']">
                 <mat-expansion-panel-header>
                     Reports
                 </mat-expansion-panel-header>
@@ -259,7 +260,7 @@
                 </mat-nav-list>
             </mat-expansion-panel>
 
-            <mat-list-item routerLink="/admin/dashboard">
+            <mat-list-item routerLink="/admin/dashboard" *appIsGranted="['SettingManagement', 'List']">
                 <mat-icon>settings</mat-icon>Setting
             </mat-list-item>
         </mat-nav-list>

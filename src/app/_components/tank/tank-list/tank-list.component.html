@@ -7,10 +7,12 @@
                 <mat-label>Search</mat-label>
                 <input matInput placeholder="Search By Name" value="" (keyup)="applyFilter($event)">
             </mat-form-field>
-    
-            <a [routerLink]="['/tank/create']" mat-fab color="primary">
-                <mat-icon>add</mat-icon>
-            </a>
+            <div *appIsGranted="['WaterBodiesMap', 'Create']">
+                <a [routerLink]="['/tank/create']" mat-fab color="primary">
+                    <mat-icon>add</mat-icon>
+                </a>
+            </div>
+          
         </div>
     <div>
         <div class="spinner-container" *ngIf="dataSource.loading$ | async">
@@ -41,9 +43,12 @@
                 <mat-header-cell *matHeaderCellDef>Details
                 </mat-header-cell>
                 <mat-cell *matCellDef="let role">
-                    <button mat-icon-button color="primary" (click)="redirectToDetails(role.id)">
-                        <mat-icon class="mat-18">reorder</mat-icon>
-                    </button>
+                    <div *appIsGranted="['WaterBodiesMap', 'View']">
+                        <button mat-icon-button color="primary" (click)="redirectToDetails(role.id)">
+                            <mat-icon class="mat-18">reorder</mat-icon>
+                        </button>
+                    </div>
+                    
                 </mat-cell>
             </ng-container>
 
@@ -52,9 +57,12 @@
                 <mat-header-cell *matHeaderCellDef>Delete
                 </mat-header-cell>
                 <mat-cell *matCellDef="let role">
-                    <button mat-icon-button color="accent" (click)="delete(role.id)">
-                        <mat-icon class="mat-18">delete</mat-icon>
-                    </button>
+                    <div *appIsGranted="['WaterBodiesMap', 'Delete']">
+                        <button mat-icon-button color="accent" (click)="delete(role.id)">
+                            <mat-icon class="mat-18">delete</mat-icon>
+                        </button>
+                    </div>
+                   
                 </mat-cell>
             </ng-container>
 

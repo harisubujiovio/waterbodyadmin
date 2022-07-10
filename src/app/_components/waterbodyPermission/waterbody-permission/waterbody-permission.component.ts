@@ -14,6 +14,8 @@ import { AccessRights } from 'src/app/_model/presentation/AccessRights';
 import { WaterBodyPermissionDataSource } from './waterbodypermission-datasource';
 import { AccessrightspermissionService } from 'src/app/_services/accessrightspermission.service';
 import { MatCheckboxChange } from '@angular/material/checkbox';
+import { AssignRolePermission } from 'src/app/_model/presentation/AssignRolePermission';
+import { SuccessDialogComponent } from 'src/app/_shared/dialogs/success-dialog/success-dialog/success-dialog.component';
 
 @Component({
   selector: 'app-waterbody-permission',
@@ -61,7 +63,39 @@ export class WaterbodyPermissionComponent implements OnInit {
   }
   permissionChanged(ob: MatCheckboxChange,resource: AccessRights) {
     console.log("checked: " + ob.checked);
-    console.log(resource)
+    if(ob.checked)
+    {
+      let newRolePermission: AssignRolePermission = {
+      role: this.permissionForm.get("role")?.value,
+      resource: resource.resource_id,
+      permission: resource.permission_id,
+      createdBy: this.user.username,
+      }
+      console.log(newRolePermission)
+      this.waterbodyPermissionService.create(newRolePermission)
+      .subscribe({
+        next: () => {
+          console.log('Permission Assigned Successfully')
+        },
+        error: (error: any) => {
+          this.errorService.handleError(error);
+          console.log(error)
+        }
+      })
+
+    }
+    else
+    {
+      this.waterbodyPermissionService.delete(resource.accessright_id).subscribe({
+        next: () => {
+          console.log('Permission removed successfully')
+        },
+        error: (error:any) => {
+          console.log(error)
+          this.errorService.handleError(error);
+        }
+      });
+    }
  } 
 
 }

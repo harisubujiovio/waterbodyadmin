@@ -16,7 +16,7 @@ import { SharedModule } from 'src/app/_shared/shared.module';
     RoleListComponent,
     RoleCreateComponent,
     RoleDetailComponent,
-    RoleuserComponent
+    RoleuserComponent,
   ],
   imports: [
     CommonModule,

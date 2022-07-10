@@ -42,7 +42,6 @@ cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     this.chartdataService.getCardSummaryData().subscribe({
       next: summaryData => {
         this.miniCardData = summaryData;
-        console.log(this.miniCardData);
       }
     });
   } 

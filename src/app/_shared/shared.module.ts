@@ -5,6 +5,8 @@ import { SuccessDialogComponent } from './dialogs/success-dialog/success-dialog/
 import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog/error-dialog.component';
 import { AngularMaterialModule } from '../_module/angular-material/angular-material.module';
 import { ConfirmationDialogComponent } from './dialogs/confirmation-dialog/confirmation-dialog/confirmation-dialog.component';
+import { IsGrantedDirective } from '../directives/is-granted.directive';
+
  
 @NgModule({
   imports: [
@@ -17,9 +19,10 @@ import { ConfirmationDialogComponent } from './dialogs/confirmation-dialog/confi
     FlexLayoutModule,
     SuccessDialogComponent,
     ErrorDialogComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    IsGrantedDirective
   ],
-  declarations: [SuccessDialogComponent, ErrorDialogComponent,ConfirmationDialogComponent],
+  declarations: [SuccessDialogComponent, ErrorDialogComponent,ConfirmationDialogComponent,IsGrantedDirective],
   entryComponents: [
     SuccessDialogComponent,
     ErrorDialogComponent,

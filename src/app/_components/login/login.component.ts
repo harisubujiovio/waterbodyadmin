@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           console.log(token)
           console.log(refreshToken)
           this.setUserSession()
-          this.router.navigate(['/admin/dashboard']);
+         
         });
     }
   }
@@ -53,9 +53,12 @@ export class LoginComponent implements OnInit {
   setUserSession() {
     this.authService.setSession()
       .subscribe(session => {
-        console.log("User Session Detail")
-        console.log(session)
         localStorage.setItem("user", JSON.stringify(session));
+        this.authService.setUserRolePermissions(session.role)
+        .subscribe(accessRights => {
+            localStorage.setItem("rolepermissions", JSON.stringify(accessRights));
+            this.router.navigate(['/admin/dashboard']);
+        });
       })
   }
 

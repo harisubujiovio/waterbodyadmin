@@ -23,7 +23,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
   declarations: [],
   imports: [
@@ -48,7 +48,8 @@ import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
     MatMenuModule,
     MatDialogModule,
     MatProgressBarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCheckboxModule
   ],
   exports: [
     FlexLayoutModule,
@@ -73,7 +74,8 @@ import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
     MatRadioModule,
     MatSelectModule,
     MatProgressBarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCheckboxModule
   ]
 })
 export class AngularMaterialModule { }

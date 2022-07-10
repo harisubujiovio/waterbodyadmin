@@ -6,7 +6,7 @@
                 <input matInput placeholder="Search By Name" value="" (keyup)="applyFilter($event)">
             </mat-form-field>
     
-            <a [routerLink]="['/waterbodyfamilynature/create']" mat-fab color="primary">
+            <a [routerLink]="['/waterbodyfamilynature/create']" mat-fab color="primary" *appIsGranted="['WaterBodyMaster', 'Create']">
                 <mat-icon>add</mat-icon>
             </a>
         </div>
@@ -37,9 +37,11 @@
                 <mat-header-cell *matHeaderCellDef>Update
                 </mat-header-cell>
                 <mat-cell *matCellDef="let resource">
-                    <button mat-icon-button color="primary" (click)="redirectToUpdate(resource.id)">
-                        <mat-icon class="mat-18">edit</mat-icon>
-                    </button>
+                    <div *appIsGranted="['WaterBodyMaster', 'Update']">
+                        <button mat-icon-button color="primary" (click)="redirectToUpdate(resource.id)">
+                            <mat-icon class="mat-18">edit</mat-icon>
+                        </button>
+                    </div>
                 </mat-cell>
             </ng-container>
 
@@ -47,9 +49,11 @@
                 <mat-header-cell *matHeaderCellDef>Delete
                 </mat-header-cell>
                 <mat-cell *matCellDef="let resource">
-                    <button mat-icon-button color="accent" (click)="delete(resource.id)">
-                        <mat-icon class="mat-18">delete</mat-icon>
-                    </button>
+                    <div *appIsGranted="['WaterBodyMaster', 'Delete']">
+                        <button mat-icon-button color="accent" (click)="delete(resource.id)">
+                            <mat-icon class="mat-18">delete</mat-icon>
+                        </button>
+                    </div>
                 </mat-cell>
             </ng-container>
 
